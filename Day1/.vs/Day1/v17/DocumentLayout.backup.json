@@ -3,11 +3,13 @@
   "WorkspaceRootPath": "C:\\DotNet\\Assignment\\Day1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58469CFB-B6E0-4BBB-BB19-316745F34F71}|Day1.csproj|c:\\dotnet\\assignment\\day1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58469CFB-B6E0-4BBB-BB19-316745F34F71}|Day1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69BE05AC-9074-4960-BA25-2F95542E092D}|..\\Day_2_Task_3\\Day_2_Task_3.csproj|c:\\dotnet\\assignment\\day_2_task_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89B183F3-A23A-4836-BE5E-95088D8B32D7}|..\\..\\.Net Training\\DemoMethod\\DemoMethod.csproj|c:\\dotnet\\.net training\\demomethod\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3C19EC4-4511-4B7F-954E-BA1A30889529}|..\\Day_2_Task_2\\Day_2_Task_2.csproj|c:\\dotnet\\assignment\\day_2_task_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51839C37-96CF-4843-B832-1BEA5CE89575}|..\\Day2\\Day2.csproj|c:\\dotnet\\assignment\\day2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,31 +19,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\DotNet\\.Net Training\\DemoMethod\\Program.cs",
-              "RelativeDocumentMoniker": "..\\..\\.Net Training\\DemoMethod\\Program.cs",
-              "ToolTip": "C:\\DotNet\\.Net Training\\DemoMethod\\Program.cs",
-              "RelativeToolTip": "..\\..\\.Net Training\\DemoMethod\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T08:06:05.411Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day1\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\DotNet\\Assignment\\Day1\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAgwDUAAAAkAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day_2_Task_3\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Day_2_Task_3\\Program.cs",
+              "ToolTip": "C:\\DotNet\\Assignment\\Day_2_Task_3\\Program.cs",
+              "RelativeToolTip": "..\\Day_2_Task_3\\Program.cs",
+              "ViewState": "AgIAAA0AAAAgmZmZmZktwBYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T05:08:33.325Z",
+              "WhenOpened": "2025-02-24T16:43:14.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day_2_Task_2\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Day_2_Task_2\\Program.cs",
+              "ToolTip": "C:\\DotNet\\Assignment\\Day_2_Task_2\\Program.cs",
+              "RelativeToolTip": "..\\Day_2_Task_2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T15:54:52.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day2\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Day2\\Program.cs",
+              "ToolTip": "C:\\DotNet\\Assignment\\Day2\\Program.cs",
+              "RelativeToolTip": "..\\Day2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T15:05:58.354Z",
               "EditorCaption": ""
             }
           ]
