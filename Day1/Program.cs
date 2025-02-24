@@ -48,10 +48,13 @@
             #endregion
 
             #region Task 4
-            string date;
+            DateTime date;
             Console.WriteLine("Discharge Date : ");
-            date = Console.ReadLine();
-            Console.WriteLine(date.Length > 0 ? date : "Not Discharged");
+            date =DateTime.Parse(Console.ReadLine());
+            Console.WriteLine(date);
+            {
+
+            }
             #endregion
         }
     }
