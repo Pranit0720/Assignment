@@ -13,11 +13,11 @@
                 { 105, 950.00 }
             };
 
-            bool validUser = false;
+            bool validUser = true;
             int userId;
 
             Console.WriteLine("Welcome to the Online Shopping Wallet System!");
-            while (!validUser)
+            while (validUser)
             {
                 Console.WriteLine("Enter User Id::");
                 userId = Convert.ToInt32(Console.ReadLine());
@@ -31,7 +31,7 @@
                         break;
                     }
                 }
-                if (!validUser)
+                if (validUser)
                 {
                     Console.WriteLine("Invalid User ID");
                 }

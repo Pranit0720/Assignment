@@ -36,10 +36,12 @@
                 Console.WriteLine("Enter your Choice");
                 choice = Convert.ToInt32(Console.ReadLine());
             }
+            double totalCost = ((numberOfGeneralTickets * 200 )+(numberOfAcTickets *1000)+(numberOfSleeperTickets * 500));
             Console.WriteLine("Tickets Details:");
             Console.WriteLine($"Number of General Tickets:{numberOfGeneralTickets}");
             Console.WriteLine($"Number of Ac Tickets:{numberOfAcTickets}");
             Console.WriteLine($"Number of Sleeper Tickets:{numberOfSleeperTickets}");
+            Console.WriteLine($"TotalCost:{totalCost}");
 
         }
     }
