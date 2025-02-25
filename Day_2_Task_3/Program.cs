@@ -17,23 +17,25 @@
             int userId;
 
             Console.WriteLine("Welcome to the Online Shopping Wallet System!");
-            while (validUser)
-            {
+            
                 Console.WriteLine("Enter User Id::");
                 userId = Convert.ToInt32(Console.ReadLine());
+            while (validUser)
+            {
 
                 for (int i = 0;i< userData.GetLength(0); i++)
                 {
                     if(userData[i,0] == userId)
                     {
-                        validUser = true;
-                        Console.WriteLine($"Wallet Balance:{userData[i,1]}");
+                        validUser = false;
+                        Console.WriteLine($"Wallet Balance:{userData[i, 1]}");
                         break;
                     }
                 }
                 if (validUser)
                 {
                     Console.WriteLine("Invalid User ID");
+                    
                 }
              
             }

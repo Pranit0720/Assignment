@@ -1,0 +1,15 @@
+C:\DotNet\Assignment\Day3\Task3\bin\Debug\net6.0\Task3.exe
+C:\DotNet\Assignment\Day3\Task3\bin\Debug\net6.0\Task3.deps.json
+C:\DotNet\Assignment\Day3\Task3\bin\Debug\net6.0\Task3.runtimeconfig.json
+C:\DotNet\Assignment\Day3\Task3\bin\Debug\net6.0\Task3.dll
+C:\DotNet\Assignment\Day3\Task3\bin\Debug\net6.0\Task3.pdb
+C:\DotNet\Assignment\Day3\Task3\obj\Debug\net6.0\Task3.GeneratedMSBuildEditorConfig.editorconfig
+C:\DotNet\Assignment\Day3\Task3\obj\Debug\net6.0\Task3.AssemblyInfoInputs.cache
+C:\DotNet\Assignment\Day3\Task3\obj\Debug\net6.0\Task3.AssemblyInfo.cs
+C:\DotNet\Assignment\Day3\Task3\obj\Debug\net6.0\Task3.csproj.CoreCompileInputs.cache
+C:\DotNet\Assignment\Day3\Task3\obj\Debug\net6.0\Task3.sourcelink.json
+C:\DotNet\Assignment\Day3\Task3\obj\Debug\net6.0\Task3.dll
+C:\DotNet\Assignment\Day3\Task3\obj\Debug\net6.0\refint\Task3.dll
+C:\DotNet\Assignment\Day3\Task3\obj\Debug\net6.0\Task3.pdb
+C:\DotNet\Assignment\Day3\Task3\obj\Debug\net6.0\Task3.genruntimeconfig.cache
+C:\DotNet\Assignment\Day3\Task3\obj\Debug\net6.0\ref\Task3.dll
