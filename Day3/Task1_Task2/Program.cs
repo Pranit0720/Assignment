@@ -7,7 +7,7 @@ namespace Task1_Task2
         static void Main(string[] args)
         {
             
-            Car car1 = new Car(100, "toyota","M12",2012,3000000);
+            Car car1 = new Car();
             //car1.addCarDetails();
             car1.displyCarDetails();
         }

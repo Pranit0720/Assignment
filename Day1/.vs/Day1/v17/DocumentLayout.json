@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\DotNet\\Assignment\\Day1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4062AE27-A1E0-4082-B2DB-8E3B0A2AC7B8}|..\\Day3\\Task3\\Task3.csproj|c:\\dotnet\\assignment\\day3\\task3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DotNet\\Assignment\\Day2\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46F0D94B-2815-443E-B83B-55CD8E8C6F10}|..\\Day3\\Task1_Task2\\Task1_Task2.csproj|c:\\dotnet\\assignment\\day3\\task1_task2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DotNet\\Assignment\\Day_2_Task_2\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46F0D94B-2815-443E-B83B-55CD8E8C6F10}|..\\Day3\\Task1_Task2\\Task1_Task2.csproj|c:\\dotnet\\assignment\\day3\\task1_task2\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DotNet\\.Net Training\\PartialDemo\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DA5AB8D-8374-4312-A3D2-69001AABF5E2}|..\\..\\.Net Training\\PartialDemo\\PartialDemo.csproj|c:\\dotnet\\.net training\\partialdemo\\student1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DotNet\\Assignment\\Day3\\Task3\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DA5AB8D-8374-4312-A3D2-69001AABF5E2}|..\\..\\.Net Training\\PartialDemo\\PartialDemo.csproj|c:\\dotnet\\.net training\\partialdemo\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DotNet\\.Net Training\\PartialDemo\\Student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DA5AB8D-8374-4312-A3D2-69001AABF5E2}|..\\..\\.Net Training\\PartialDemo\\PartialDemo.csproj|c:\\dotnet\\.net training\\partialdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DotNet\\Assignment\\Day3\\Task1_Task2\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51839C37-96CF-4843-B832-1BEA5CE89575}|..\\Day2\\Day2.csproj|c:\\dotnet\\assignment\\day2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DotNet\\Assignment\\Day3\\Task1_Task2\\Car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3C19EC4-4511-4B7F-954E-BA1A30889529}|..\\Day_2_Task_2\\Day_2_Task_2.csproj|c:\\dotnet\\assignment\\day_2_task_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DotNet\\.Net Training\\PartialDemo\\Student1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,50 +34,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day3\\Task3\\Program.cs",
-              "RelativeDocumentMoniker": "..\\Day3\\Task3\\Program.cs",
-              "ToolTip": "C:\\DotNet\\Assignment\\Day3\\Task3\\Program.cs",
-              "RelativeToolTip": "..\\Day3\\Task3\\Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwCAAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T15:49:34.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\DotNet\\Assignment\\Day3\\Task1_Task2\\Program.cs",
               "RelativeDocumentMoniker": "..\\Day3\\Task1_Task2\\Program.cs",
               "ToolTip": "C:\\DotNet\\Assignment\\Day3\\Task1_Task2\\Program.cs",
               "RelativeToolTip": "..\\Day3\\Task1_Task2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T15:48:49.472Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\DotNet\\Assignment\\Day3\\Task1_Task2\\Car.cs",
               "RelativeDocumentMoniker": "..\\Day3\\Task1_Task2\\Car.cs",
               "ToolTip": "C:\\DotNet\\Assignment\\Day3\\Task1_Task2\\Car.cs",
               "RelativeToolTip": "..\\Day3\\Task1_Task2\\Car.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAFkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T15:48:47.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-25T15:48:47.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Student1.cs",
               "DocumentMoniker": "C:\\DotNet\\.Net Training\\PartialDemo\\Student1.cs",
               "RelativeDocumentMoniker": "..\\..\\.Net Training\\PartialDemo\\Student1.cs",
@@ -85,8 +71,7 @@
               "RelativeToolTip": "..\\..\\.Net Training\\PartialDemo\\Student1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T12:30:42.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-25T12:30:42.216Z"
             },
             {
               "$type": "Document",
@@ -96,13 +81,27 @@
               "RelativeDocumentMoniker": "..\\..\\.Net Training\\PartialDemo\\Student.cs",
               "ToolTip": "C:\\DotNet\\.Net Training\\PartialDemo\\Student.cs",
               "RelativeToolTip": "..\\..\\.Net Training\\PartialDemo\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T12:29:58.403Z"
+              "WhenOpened": "2025-02-25T12:29:58.403Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day3\\Task3\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Day3\\Task3\\Program.cs",
+              "ToolTip": "C:\\DotNet\\Assignment\\Day3\\Task3\\Program.cs",
+              "RelativeToolTip": "..\\Day3\\Task3\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwCAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:49:34.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\DotNet\\.Net Training\\PartialDemo\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\.Net Training\\PartialDemo\\Program.cs",
@@ -110,23 +109,25 @@
               "RelativeToolTip": "..\\..\\.Net Training\\PartialDemo\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T12:29:25.52Z"
+              "WhenOpened": "2025-02-25T12:29:25.52Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\DotNet\\Assignment\\Day_2_Task_2\\Program.cs",
               "RelativeDocumentMoniker": "..\\Day_2_Task_2\\Program.cs",
               "ToolTip": "C:\\DotNet\\Assignment\\Day_2_Task_2\\Program.cs",
               "RelativeToolTip": "..\\Day_2_Task_2\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAxwCwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:54:52.077Z"
+              "WhenOpened": "2025-02-24T15:54:52.077Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\DotNet\\Assignment\\Day2\\Program.cs",
               "RelativeDocumentMoniker": "..\\Day2\\Program.cs",
@@ -134,7 +135,8 @@
               "RelativeToolTip": "..\\Day2\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:05:58.354Z"
+              "WhenOpened": "2025-02-24T15:05:58.354Z",
+              "EditorCaption": ""
             }
           ]
         }
