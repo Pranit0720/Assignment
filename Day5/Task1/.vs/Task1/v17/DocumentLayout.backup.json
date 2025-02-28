@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\DotNet\\Assignment\\Day5\\Task1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{21E4FF6B-406C-41C3-9095-A919F18316CB}|..\\Task2\\Task2.csproj|c:\\dotnet\\assignment\\day5\\task2\\repo\\fourwheeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E4FF6B-406C-41C3-9095-A919F18316CB}|..\\Task2\\Task2.csproj|c:\\dotnet\\assignment\\day5\\task2\\repo\\vehicleinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E4FF6B-406C-41C3-9095-A919F18316CB}|..\\Task2\\Task2.csproj|c:\\dotnet\\assignment\\day5\\task2\\repo\\commercialinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E4FF6B-406C-41C3-9095-A919F18316CB}|..\\Task2\\Task2.csproj|c:\\dotnet\\assignment\\day5\\task2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E4FF6B-406C-41C3-9095-A919F18316CB}|..\\Task2\\Task2.csproj|c:\\dotnet\\assignment\\day5\\task2\\repo\\twowheelerinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TwoWheelerInsurance.cs",
+              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day5\\Task2\\Repo\\TwoWheelerInsurance.cs",
+              "RelativeDocumentMoniker": "..\\Task2\\Repo\\TwoWheelerInsurance.cs",
+              "ToolTip": "C:\\DotNet\\Assignment\\Day5\\Task2\\Repo\\TwoWheelerInsurance.cs",
+              "RelativeToolTip": "..\\Task2\\Repo\\TwoWheelerInsurance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T17:48:41.698Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day5\\Task2\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Task2\\Program.cs",
+              "ToolTip": "C:\\DotNet\\Assignment\\Day5\\Task2\\Program.cs",
+              "RelativeToolTip": "..\\Task2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T18:01:39.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CommercialInsurance.cs",
+              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day5\\Task2\\Repo\\CommercialInsurance.cs",
+              "RelativeDocumentMoniker": "..\\Task2\\Repo\\CommercialInsurance.cs",
+              "ToolTip": "C:\\DotNet\\Assignment\\Day5\\Task2\\Repo\\CommercialInsurance.cs",
+              "RelativeToolTip": "..\\Task2\\Repo\\CommercialInsurance.cs",
+              "ViewState": "AgIAAAYAAADAMjMzMzMrwBAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T18:00:38.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FourWheeler.cs",
+              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day5\\Task2\\Repo\\FourWheeler.cs",
+              "RelativeDocumentMoniker": "..\\Task2\\Repo\\FourWheeler.cs",
+              "ToolTip": "C:\\DotNet\\Assignment\\Day5\\Task2\\Repo\\FourWheeler.cs",
+              "RelativeToolTip": "..\\Task2\\Repo\\FourWheeler.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAABIPRAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T17:58:49.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehicleInsurance.cs",
+              "DocumentMoniker": "C:\\DotNet\\Assignment\\Day5\\Task2\\Repo\\VehicleInsurance.cs",
+              "RelativeDocumentMoniker": "..\\Task2\\Repo\\VehicleInsurance.cs",
+              "ToolTip": "C:\\DotNet\\Assignment\\Day5\\Task2\\Repo\\VehicleInsurance.cs",
+              "RelativeToolTip": "..\\Task2\\Repo\\VehicleInsurance.cs",
+              "ViewState": "AgIAAAsAAACwy8zMzMwmwBYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T17:47:54.769Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

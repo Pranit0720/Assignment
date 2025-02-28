@@ -13,7 +13,7 @@ namespace Task1
         public User()
         {
             var++;
-            Console.WriteLine($"User {var} is login.");
+            
         }
         public static void noOfUser()
         {

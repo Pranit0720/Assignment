@@ -10,8 +10,8 @@
             man1.DisplayDetails();
             Employee newEmp = new Manager("Affan", 200000.00, 10000.00);
             newEmp.DisplayDetails();
-            Manager newEmp1 = (Manager)new Employee("Pratik", 400000.00);
-            newEmp.DisplayDetails();
+            //Manager newEmp1 = (Manager)new Employee("Pratik", 400000.00);
+            //newEmp.DisplayDetails();
 
         }
     }

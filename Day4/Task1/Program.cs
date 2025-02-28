@@ -9,7 +9,7 @@
             User c3 = new User();
             User c4 = new User();
 
-            User.noOfUser();
+            User.NoOfUser();
         }
     }
 }
