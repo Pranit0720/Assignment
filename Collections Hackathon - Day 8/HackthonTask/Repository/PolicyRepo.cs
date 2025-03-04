@@ -14,10 +14,10 @@ namespace HackthonTask.Repository
         Policy p1;
         List<Policy> ListOfPolices=new List<Policy>()
         {
-            new Policy(13554,"Pranit",PolicyTypes.Life,new DateTime(2002-04-07),new DateTime(2030-04-07)),
-            new Policy(13555,"Atharva",PolicyTypes.Health,new DateTime(2001-01-01),new DateTime(2020-01-01)),
-            new Policy(13556,"Govind",PolicyTypes.Property,new DateTime(2002-02-27),new DateTime(2030-04-07)),
-            new Policy(13554,"kapil",PolicyTypes.Life,new DateTime(2005-12-31),new DateTime(2010-04-07))
+            new Policy(13554,"Pranit",PolicyTypes.Life,new DateTime(2002,04,07),new DateTime(2030,04,07)),
+            new Policy(13555,"Atharva",PolicyTypes.Health,new DateTime(2001,01,01),new DateTime(2020,01,01)),
+            new Policy(13556,"Govind",PolicyTypes.Property,new DateTime(2002,02,27),new DateTime(2030,04,07)),
+            new Policy(13557,"kapil",PolicyTypes.Life,new DateTime(2005,12,31),new DateTime(2010,04,07))
         };
 
         
