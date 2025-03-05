@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HackthonTask.Repository.Enum;
 
 namespace HackthonTask.Model
 {
-   
+
     internal class Policy
     {
-        public enum PolicyTypes
-        {
-            Life,
-            Health,
-            Vehicle,
-            Property
-        }
+    public enum PolicyTypes
+    {
+        Life,
+        Health,
+        Vehicle,
+        Property
+    }
+        
 
         public int PolicyID { get; set; }
         public string PolicyHolderName { get; set; }

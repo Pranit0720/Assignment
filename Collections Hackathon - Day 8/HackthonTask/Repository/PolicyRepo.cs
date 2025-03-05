@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using HackthonTask.Exceptions;
 using HackthonTask.Model;
 using static HackthonTask.Model.Policy;
+//using static HackthonTask.Repository.Enum;
 
 namespace HackthonTask.Repository
 {
@@ -45,20 +46,13 @@ namespace HackthonTask.Repository
                 PolicyTypes:
                 Console.WriteLine("Select Policy Type: 0-Life, 1-Health, 2-Vehicle, 3-Property");
                 PolicyTypes type;
-                while (!Enum.TryParse(Console.ReadLine(),out type) || !Enum.IsDefined(typeof(PolicyTypes),type))
+                while ((!Enum.TryParse(Console.ReadLine(),out type)) || (!Enum.IsDefined(typeof(PolicyTypes),type)))
                 {
                     Console.Write("Invalid Policy Type. Enter again: ");
                     goto PolicyTypes;
                 }
+                DateTime sDate = DateTime.Now;
                 
-                StartDate:
-                Console.WriteLine("Enter Start date in yyyy-mm-dd");
-                DateTime sDate;
-                while (!DateTime.TryParse(Console.ReadLine(), out sDate))
-                {
-                    Console.WriteLine("Invalid date format. Enter again:");
-                    goto StartDate;
-                }
 
                 EndDate:
                 Console.WriteLine("Enter End date in yyyy-mm-dd");
@@ -154,27 +148,42 @@ namespace HackthonTask.Repository
                     
                         
                         Console.Write("Enter Policy Holder Name: ");
-                        policy.PolicyHolderName = Console.ReadLine();
-                        
+                        string name = Console.ReadLine();
+
+                    if (name != null)
+                    {
+                        policy.PolicyHolderName = name;
+                    }
 
 
+                    Type:
                     Console.WriteLine("Select New Policy Type: 0-Life, 1-Health, 2-Vehicle, 3-Property");
+                    string pType= Console.ReadLine();
                     PolicyTypes type;
                     
-                    while (!Enum.TryParse(Console.ReadLine(), out type) || !Enum.IsDefined(typeof(PolicyTypes), type))
+                    if(pType != null)
                     {
+                      if (!Enum.TryParse(pType, out type) || !Enum.IsDefined(typeof(PolicyTypes), type))
+                      {
                         Console.Write("Invalid Policy Type. Enter again: ");
+                        goto Type;
+                      }
+                     policy.PolicyType = type;
                     }
-                    policy.PolicyType = type;
 
-
+                    EndDate:
                     Console.Write("Enter New End Date (yyyy-MM-dd): ");
+                    string endD = Console.ReadLine();
                     DateTime endDate;
-                    while (!DateTime.TryParse(Console.ReadLine(), out endDate) || endDate <= policy.StartDate)
+                    if ( endD!= null)
+                    {
+                    if (!DateTime.TryParse(endD, out endDate) || endDate <= policy.StartDate)
                     {
                         Console.Write("Invalid End Date. Must be after Start Date. Enter again: ");
+                            goto EndDate;
                     }
-                    policy.EndDate = endDate;
+                        policy.EndDate = endDate;
+                    }
 
                     Console.WriteLine("Policy updated successfully!");
 
