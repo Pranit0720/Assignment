@@ -149,7 +149,7 @@ namespace HackthonTask.Repository
                     Console.Write("Enter Policy Holder Name: ");
                     string name = Console.ReadLine();
 
-                    if (name != null)
+                    if (name != "")
                     {
                         policy.PolicyHolderName = name;
                     }
@@ -160,7 +160,7 @@ namespace HackthonTask.Repository
                     string pType = Console.ReadLine();
                     PolicyTypes type;
 
-                    if (pType != null)
+                    if (pType !="")
                     {
                         if (!Enum.TryParse(pType, out type) || !Enum.IsDefined(typeof(PolicyTypes), type))
                         {
@@ -174,7 +174,7 @@ namespace HackthonTask.Repository
                     Console.Write("Enter New End Date (yyyy-MM-dd): ");
                     string endD = Console.ReadLine();
                     DateTime endDate;
-                    if (endD != null)
+                    if (endD != "")
                     {
                         if (!DateTime.TryParse(endD, out endDate) || endDate <= policy.StartDate)
                         {

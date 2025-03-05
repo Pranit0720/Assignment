@@ -10,13 +10,13 @@ namespace HackthonTask.Model
 
     internal class Policy
     {
-    public enum PolicyTypes
-    {
-        Life,
-        Health,
-        Vehicle,
-        Property
-    }
+    //public enum PolicyTypes
+    //{
+    //    Life,
+    //    Health,
+    //    Vehicle,
+    //    Property
+    //}
         
 
         public int PolicyID { get; set; }
