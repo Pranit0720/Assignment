@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 using HackthonTask.Exceptions;
 using HackthonTask.Model;
 using static HackthonTask.Model.Policy;
-//using static HackthonTask.Repository.Enum;
 
 namespace HackthonTask.Repository
 {
-    internal class PolicyRepo:IPolicy
+    internal class PolicyRepo : IPolicy
     {
         Policy p1;
-        List<Policy> ListOfPolices=new List<Policy>()
+        List<Policy> ListOfPolices = new List<Policy>()
         {
             new Policy(13554,"Pranit",PolicyTypes.Life,new DateTime(2002,04,07),new DateTime(2030,04,07)),
             new Policy(13555,"Atharva",PolicyTypes.Health,new DateTime(2001,01,01),new DateTime(2020,01,01)),
@@ -21,7 +20,7 @@ namespace HackthonTask.Repository
             new Policy(13557,"kapil",PolicyTypes.Life,new DateTime(2005,12,31),new DateTime(2010,04,07))
         };
 
-        
+
 
 
         //-----------------Add New Policy--------------
@@ -30,49 +29,49 @@ namespace HackthonTask.Repository
             try
             {
 
-            Console.WriteLine("Enter Policy Id:");
-            int pId = Convert.ToInt32(Console.ReadLine());
-            if (FindById(pId) == null)
-            {
-                Name:
-                Console.Write("Enter Policy Holder Name: ");
-                string policyHolderName = Console.ReadLine();
-                while (string.IsNullOrWhiteSpace(policyHolderName))
+                Console.WriteLine("Enter Policy Id:");
+                int pId = Convert.ToInt32(Console.ReadLine());
+                if (FindById(pId) == null)
                 {
-                    Console.Write("Policy Holder Name cannot be empty. Enter again: ");
-                    goto Name;
-                }
+                Name:
+                    Console.Write("Enter Policy Holder Name: ");
+                    string policyHolderName = Console.ReadLine();
+                    while (string.IsNullOrWhiteSpace(policyHolderName))
+                    {
+                        Console.Write("Policy Holder Name cannot be empty. Enter again: ");
+                        goto Name;
+                    }
 
                 PolicyTypes:
-                Console.WriteLine("Select Policy Type: 0-Life, 1-Health, 2-Vehicle, 3-Property");
-                PolicyTypes type;
-                while ((!Enum.TryParse(Console.ReadLine(),out type)) || (!Enum.IsDefined(typeof(PolicyTypes),type)))
-                {
-                    Console.Write("Invalid Policy Type. Enter again: ");
-                    goto PolicyTypes;
-                }
+                    Console.WriteLine("Select Policy Type: 0-Life, 1-Health, 2-Vehicle, 3-Property");
+                    PolicyTypes type;
+                    while (!Enum.TryParse(Console.ReadLine(), out type) || !Enum.IsDefined(typeof(PolicyTypes), type))
+                    {
+                        Console.Write("Invalid Policy Type. Enter again: ");
+                        goto PolicyTypes;
+                    }
+
                 DateTime sDate = DateTime.Now;
-                
 
                 EndDate:
-                Console.WriteLine("Enter End date in yyyy-mm-dd");
-                DateTime eDate;
-                while (!DateTime.TryParse(Console.ReadLine(), out eDate))
-                {
-                    Console.WriteLine("Invalid date format. Enter again:");
-                    goto EndDate;
+                    Console.WriteLine("Enter End date in yyyy-mm-dd");
+                    DateTime eDate;
+                    while (!DateTime.TryParse(Console.ReadLine(), out eDate))
+                    {
+                        Console.WriteLine("Invalid date format. Enter again:");
+                        goto EndDate;
+                    }
+
+                    ListOfPolices.Add(new Policy(pId, policyHolderName, type, sDate, eDate));
+                    Console.WriteLine("Policy added successfully!");
+
                 }
-
-                ListOfPolices.Add(new Policy(pId, policyHolderName,type, sDate,eDate));
-                Console.WriteLine("Policy added successfully!");
-
+                else
+                {
+                    throw new IdIsAlreadyPresentException($"Policy id::{pId} is already available!!");
+                }
             }
-            else
-            {
-                throw new IdIsAlreadyPresentException($"Policy id::{pId} is already available!!");
-            }
-            }
-            catch(IdIsAlreadyPresentException e)
+            catch (IdIsAlreadyPresentException e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -87,7 +86,7 @@ namespace HackthonTask.Repository
 
         public Policy FindById(int id)
         {
-            return ListOfPolices.Find(p=>p.PolicyID==id);
+            return ListOfPolices.Find(p => p.PolicyID == id);
         }
 
         //----------View All Policies---------
@@ -110,13 +109,13 @@ namespace HackthonTask.Repository
             {
                 if (FindById(id) != null)
                 {
-                    var search=ListOfPolices.Where(p=>p.PolicyID == id);
-                    foreach(var sp in search)
+                    var search = ListOfPolices.Where(p => p.PolicyID == id);
+                    foreach (var sp in search)
                     {
 
                         Console.WriteLine($"Policy Id:{sp.PolicyID}\t Policy Holder Name:{sp.PolicyHolderName}\tPolicy Type:{sp.PolicyType}\t Start Date:{sp.StartDate:yyyy-MM-dd}\tEnd Date:{sp.EndDate:yyyy-MM-dd}");
                     }
-                    
+
                 }
                 else
                 {
@@ -131,8 +130,8 @@ namespace HackthonTask.Repository
             {
                 Console.WriteLine(e.Message);
             }
-            
-            
+
+
         }
 
 
@@ -145,10 +144,10 @@ namespace HackthonTask.Repository
                 if (FindById(id) != null)
                 {
                     var policy = ListOfPolices.FirstOrDefault(p => p.PolicyID == id);
-                    
-                        
-                        Console.Write("Enter Policy Holder Name: ");
-                        string name = Console.ReadLine();
+
+
+                    Console.Write("Enter Policy Holder Name: ");
+                    string name = Console.ReadLine();
 
                     if (name != null)
                     {
@@ -156,32 +155,32 @@ namespace HackthonTask.Repository
                     }
 
 
-                    Type:
+                Type:
                     Console.WriteLine("Select New Policy Type: 0-Life, 1-Health, 2-Vehicle, 3-Property");
-                    string pType= Console.ReadLine();
+                    string pType = Console.ReadLine();
                     PolicyTypes type;
-                    
-                    if(pType != null)
+
+                    if (pType != null)
                     {
-                      if (!Enum.TryParse(pType, out type) || !Enum.IsDefined(typeof(PolicyTypes), type))
-                      {
-                        Console.Write("Invalid Policy Type. Enter again: ");
-                        goto Type;
-                      }
-                     policy.PolicyType = type;
+                        if (!Enum.TryParse(pType, out type) || !Enum.IsDefined(typeof(PolicyTypes), type))
+                        {
+                            Console.Write("Invalid Policy Type. Enter again: ");
+                            goto Type;
+                        }
+                        policy.PolicyType = type;
                     }
 
-                    EndDate:
+                EndDate:
                     Console.Write("Enter New End Date (yyyy-MM-dd): ");
                     string endD = Console.ReadLine();
                     DateTime endDate;
-                    if ( endD!= null)
+                    if (endD != null)
                     {
-                    if (!DateTime.TryParse(endD, out endDate) || endDate <= policy.StartDate)
-                    {
-                        Console.Write("Invalid End Date. Must be after Start Date. Enter again: ");
+                        if (!DateTime.TryParse(endD, out endDate) || endDate <= policy.StartDate)
+                        {
+                            Console.Write("Invalid End Date. Must be after Start Date. Enter again: ");
                             goto EndDate;
-                    }
+                        }
                         policy.EndDate = endDate;
                     }
 
@@ -254,7 +253,7 @@ namespace HackthonTask.Repository
 
         public void ViewActivePolicies()
         {
-            var activePolicie=ListOfPolices.Where(p=>p.IsActive()).ToList();
+            var activePolicie = ListOfPolices.Where(p => p.IsActive()).ToList();
             if (activePolicie.Any())
             {
                 Console.WriteLine("Active Policies");
