@@ -9,6 +9,9 @@ insert into Authors values
 (4,'Rakesh','India'),
 (5,'J.K. Rowling', 'United Kingdom')
 
+insert into Authors values
+(6 ,'Bhagat','India')
+
 
 
 select * from Authors;
@@ -30,6 +33,10 @@ insert into Books values
 (3,'Pride and Prejudice', 3, 18.75, 1813),
 (4,'The Adventures of Tom Sawyer', 4, 12.99, 1876),
 (5,'Murder on the Orient Express', 5, 22.99, 1934);
+
+
+insert into Books values 
+(6,'Pranit', 4, 69.68, 1997),(7,'Kapil', 2, 45.45, 1998)
 
 update Books 
 set Title ='SQL Mastery'
@@ -64,6 +71,9 @@ INSERT INTO Customers (Name, Email, PhoneNumber) VALUES
 ('David Wilson', 'david@example.com', '5566778899'),
 ('Emma Davis', 'emma@example.com', '6677889900');
 
+INSERT INTO Customers (Name, Email, PhoneNumber) VALUES 
+('Durva', 'durva@example.com', '1234545267')
+
 select * from Customers;
 drop table Customers
 drop database BookStoreDB
@@ -89,6 +99,8 @@ INSERT INTO Orders (CustomerID, OrderDate, TotalAmount) VALUES
 (103, '2025-03-04', 25.98),
 (101, '2025-03-05', 45.98);
 
+INSERT INTO Orders (CustomerID, OrderDate, TotalAmount) VALUES 
+(100, '2024-03-01', 41.98)
 
 drop table Orders;
 select * from Orders;
@@ -175,6 +187,195 @@ where Name like 'A%' or Name like 'J%'
 select sum(TotalAmount) as TotalRevenue
 from Orders;
 
+
+--Joins
+
+--1. Retrieve all book titles along with their respective author names.
+
+select * from Books
+select * from Authors
+select b.Title as BookTitle,a.Name as AuthorName
+from Books b
+Left join Authors a
+on b.AuthorID=a.AuthorID
+
+--2. List all customers and their orders (if any). 
+select c.*,o.*
+from Customers c
+full outer join Orders o
+on c.CustomerID=o.CustomerID
+
+--3. Find all books that have never been ordered.
+select * from Books
+select * from OrderItems
+select*
+from Books b
+left join OrderItems oi
+on b.BookID=oi.BookID
+where oi.OrderItemID is null
+
+--4. Retrieve the total number of orders placed by each customer
+select * from Customers
+select * from Orders
+select c.CustomerID,c.Name,count(o.OrderID) as TotalOrderCount
+from Customers c
+left join Orders o
+on o.CustomerID=c.CustomerID
+group by c.CustomerID,c.Name
+
+--5. Find the books ordered along with the quantity for each order.
+
+select * from Books
+select * from OrderItems
+
+--SELECT B.BOOKID,B.TITLE,OI.QUANTITY
+--FROM BOOKS B
+--LEFT JOIN ORDERITEMS OI
+--ON B.BOOKID=OI.BOOKID
+--WHERE OI.QUANTITY IS NOT NULL
+
+select o.OrderID , b.Title,oi.Quantity
+from OrderItems oi
+join Books b on oi.BookID=b.BookID
+join Orders o on oi.OrderID=o.OrderID
+order by o.OrderID
+
+--6. Display all customers, even those who haven’t placed any orders.
+
+select * from Customers
+select * from Orders
+
+select c.CustomerID,c.Name,o.OrderID
+from Customers c
+left join Orders o
+on c.CustomerID=o.CustomerID
+
+--7. Find authors who have not written any books
+select * from Books
+select * from Authors
+
+select a.AuthorID,a.Name,b.BookID
+from Authors a
+left join Books b
+on a.AuthorID=b.AuthorID
+where b.BookID is null
+
+--SubQueries
+--1. Find the customer(s) who placed the first order (earliest OrderDate).
+
+select * from Customers
+select * from Orders
+
+select *
+from Customers
+where CustomerID=
+(select top 1 CustomerID
+from Orders
+order by OrderDate asc)
+
+
+--2. Find the customer(s) who placed the most orders
+select * from Customers
+select * from Orders
+
+
+
+select * from Customers
+where CustomerId in
+(select top 1 with ties CustomerID
+from Orders
+group by CustomerID
+order by count(OrderID) desc)
+
+select * from Books
+insert into Orders values(101,'2025-03-16',50.55);
+
+delete  from Orders where OrderID=7;
+
+--select  result.Customerid, Max(result.TOtalOrders) From (
+--select  c.CustomerId as CustomerID, COUNT(o.OrderID) as TOtalOrders from Customers  c
+--inner join  orders o on c.Customerid= o.CUstomerid
+--group by c.Customerid  
+--) as result
+--group by result.Customerid 
+--having MAX(result.TOtalOrders) >1
+
+ --3. Find customers who have not placed any orders
+
+select * from Customers
+
+select * from Orders
+select * from Customers
+where CustomerID not in
+(select CustomerId 
+from Orders)
+
+--4. Retrieve all books cheaper than the most expensive book written by( any author based on your data)select * from Books
+select * from Authors
+
+select * 
+from Books
+where AuthorId=4 and Price <
+(select max(Price)
+from Books 
+where AuthorId =4)
+
+--5. List all customers whose total spending is greater than the average spending of all customers
+ select * from customers
+ select * from orders
+
+ select * from Customers
+ where CustomerID in
+(select CustomerID
+from Orders 
+where TotalAmount>
+ (select avg(TotalAmount) 
+ from Orders))
+
+-- Stored Procedures 
+--1. Write a stored procedure that accepts a CustomerID and returns all orders 
+--placed by that customer 
+ create procedure sp_GiveOrderListByCustomerID 
+ @CustId int
+ as 
+ begin
+ select * from Orders
+ where CustomerID = @CustId
+ end
+
+ exec sp_GiveOrderListByCustomerID 101;
+
+
+
+
+
+--2. Create a procedure that accepts MinPrice and MaxPrice as parameters 
+--and returns all books within that range 
+select * from Books
+create procedure sp_FindBooksInRange
+@MinPrice decimal(10,2),@MaxPrice decimal(10,2)
+as 
+begin
+Select *
+from Books
+where Price between @MinPrice and @MaxPrice
+end
+
+exec sp_FindBooksInRange 0.00,2000.00;
+
+
+--Views 
+--1.Create a view named AvailableBooks that shows only books that are in 
+--stock, including BookID, Title, AuthorID, Price, and PublishedYear
+
+create view VWBookDetails
+as
+select BookID,Title,AuthorID,Price
+from Books
+where PublishedYear > 2000;
+
+select * from Books
+select * from VWBookDetails;
 
 
 
