@@ -110,58 +110,7 @@ namespace HackthonTask.Repository
 
 
 
-        ////--------------Search Policy By Id--------
-
-        //public List<Policy> SearchById(int id)
-        //{
-        //    try
-        //    {
-        //        if (FindById(id) != null)
-        //        {
-        //            List<Policy> policyNew = new List<Policy>();
-        //            using (SqlConnection sqlConnection = new SqlConnection(connstring))
-        //            {
-        //                cmd.CommandText = "select * from Policys where id=@id";
-        //                cmd.Parameters.AddWithValue("@id", id);
-        //                cmd.Connection = sqlConnection;
-        //                sqlConnection.Open();
-        //                SqlDataReader reader = cmd.ExecuteReader();
-        //                if (!reader.HasRows)
-        //                {
-        //                    throw new PolicyNotFoundException($"Policy id {id} is not exists");
-        //                }
-        //                while (reader.Read())
-        //                {
-        //                    Policy policy = new Policy();
-        //                    policy.PolicyID = reader.GetInt32("PolicyID");
-        //                    policy.PolicyHolderName = reader.GetString("PolicyHolderName");
-        //                    policy.PolicyType = Enum.Parse<PolicyTypes>(reader.GetString("PolicyType"));
-        //                    policy.StartDate = reader.GetDateTime("StartDate");
-        //                    policy.EndDate = reader.GetDateTime("EndDate");
-        //                    policyNew.Add(policy);
-
-        //                }
-
-        //            }
-        //            return policyNew;
-
-        //        }
-        //        else
-        //        {
-        //            throw new PolicyNotFoundException($"Policy Id:{id} is not Found!!");
-        //        }
-        //    }
-        //    catch (PolicyNotFoundException e)
-        //    {
-        //        Console.WriteLine(e.Message);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        Console.WriteLine(e.Message);
-        //    }
-
-
-        //}
+      
 
         public List<Policy> SearchById(int id)
         {
@@ -282,7 +231,58 @@ namespace HackthonTask.Repository
         ////};
 
 
+        ////--------------Search Policy By Id--------
 
+        //public List<Policy> SearchById(int id)
+        //{
+        //    try
+        //    {
+        //        if (FindById(id) != null)
+        //        {
+        //            List<Policy> policyNew = new List<Policy>();
+        //            using (SqlConnection sqlConnection = new SqlConnection(connstring))
+        //            {
+        //                cmd.CommandText = "select * from Policys where id=@id";
+        //                cmd.Parameters.AddWithValue("@id", id);
+        //                cmd.Connection = sqlConnection;
+        //                sqlConnection.Open();
+        //                SqlDataReader reader = cmd.ExecuteReader();
+        //                if (!reader.HasRows)
+        //                {
+        //                    throw new PolicyNotFoundException($"Policy id {id} is not exists");
+        //                }
+        //                while (reader.Read())
+        //                {
+        //                    Policy policy = new Policy();
+        //                    policy.PolicyID = reader.GetInt32("PolicyID");
+        //                    policy.PolicyHolderName = reader.GetString("PolicyHolderName");
+        //                    policy.PolicyType = Enum.Parse<PolicyTypes>(reader.GetString("PolicyType"));
+        //                    policy.StartDate = reader.GetDateTime("StartDate");
+        //                    policy.EndDate = reader.GetDateTime("EndDate");
+        //                    policyNew.Add(policy);
+
+        //                }
+
+        //            }
+        //            return policyNew;
+
+        //        }
+        //        else
+        //        {
+        //            throw new PolicyNotFoundException($"Policy Id:{id} is not Found!!");
+        //        }
+        //    }
+        //    catch (PolicyNotFoundException e)
+        //    {
+        //        Console.WriteLine(e.Message);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine(e.Message);
+        //    }
+
+
+        //}
 
         ////-----------------Add New Policy--------------
         //public void AddPolicy()
@@ -362,7 +362,7 @@ namespace HackthonTask.Repository
 
 
 
-        
+
 
 
         ////-------------Update By Id-----
