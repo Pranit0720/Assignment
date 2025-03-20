@@ -1,9 +1,10 @@
 ﻿using EventBookingSystem.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventBookingSystem.DBContext
 {
-    public class BookingContext:DbContext
+    public class BookingContext:IdentityDbContext
     {
         public BookingContext(DbContextOptions<BookingContext>options):base(options)
         {

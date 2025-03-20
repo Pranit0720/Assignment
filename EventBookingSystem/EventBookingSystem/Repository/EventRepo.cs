@@ -13,7 +13,7 @@ namespace EventBookingSystem.Repository
 
         }
 
-        public async Task<int> AbbEvents(Event events)
+        public async Task<int> AddEvents(Event events)
         {
             await _bookingContext.Events.AddAsync(events);
             return await _bookingContext.SaveChangesAsync();

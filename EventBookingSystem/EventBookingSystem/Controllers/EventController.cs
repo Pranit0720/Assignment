@@ -30,7 +30,7 @@ namespace EventBookingSystem.Controllers
             ModelState.Remove("TicketBookings");
             if (ModelState.IsValid)
             {
-                int result = await _eventServices.AbbEvents(events);
+                int result = await _eventServices.AddEvents(events);
                 if (result > 0)
                 {
                     TempData["message"] = "Book Added Succesfully!!";

@@ -13,9 +13,9 @@ namespace EventBookingSystem.Services
             _eventRepo = eventRepo;
         }
 
-        public async Task<int> AbbEvents(Event events)
+        public async Task<int> AddEvents(Event events)
         {
-            return await _eventRepo.AbbEvents(events);
+            return await _eventRepo.AddEvents(events);
         }
 
         public async Task<int> EditEvent(Event events)
