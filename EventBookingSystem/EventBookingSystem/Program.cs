@@ -1,4 +1,5 @@
 using EventBookingSystem.DBContext;
+using EventBookingSystem.Models;
 using EventBookingSystem.Repository;
 using EventBookingSystem.Services;
 using Microsoft.AspNetCore.Identity;
@@ -19,8 +20,19 @@ namespace EventBookingSystem
             builder.Services.AddDbContext<BookingContext>(options=>options.UseSqlServer(conn));
             builder.Services.AddScoped<IEventRepo,EventRepo>();
             builder.Services.AddScoped<IEventServices, EventServices>();
-            builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+            builder.Services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<BookingContext>();//Add and receive info about user using
+
+            //Add password validations
+
+            //builder.Services.AddIdentity<IdentityUser, IdentityRole>(Options => 
+            //{
+            //    Options.Password.RequiredLength = 8;
+            //    Options.Password.RequireNonAlphanumeric = false;
+            //    Options.Password.RequireLowercase = true;
+            //}
+            //)
+            //    .AddEntityFrameworkStores<BookingContext>();//Add and receive info about user using
 
             var app = builder.Build();
 

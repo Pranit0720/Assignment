@@ -1,4 +1,5 @@
-﻿using EventBookingSystem.ViewModels;
+﻿using EventBookingSystem.Models;
+using EventBookingSystem.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,9 +7,9 @@ namespace EventBookingSystem.Controllers
 {
     public class AccountController : Controller
     {
-        readonly UserManager<IdentityUser> _userManager;
-        readonly SignInManager<IdentityUser> _signInManager;
-        public AccountController(UserManager<IdentityUser>manager,SignInManager<IdentityUser>signInManager)
+        readonly UserManager<User> _userManager;
+        readonly SignInManager<User> _signInManager;
+        public AccountController(UserManager<User> manager,SignInManager<User>signInManager)
         {
             _userManager = manager;
             _signInManager = signInManager;
@@ -24,11 +25,11 @@ namespace EventBookingSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                var createdUser = new IdentityUser { UserName = user.Email, Email = user.Email };
+                var createdUser = new User { UserName = user.Email, Email = user.Email };
                 var result = await _userManager.CreateAsync(createdUser, user.Password);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("GetAllEvents","Event");
+                    return RedirectToAction("Login");
                 }
                 foreach (var error in result.Errors)
                 {
@@ -36,6 +37,26 @@ namespace EventBookingSystem.Controllers
                 }
             }
             return View(user);
+        }
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel login)
+        {
+            if (ModelState.IsValid)
+            {
+                var result=await _signInManager.PasswordSignInAsync(login.Email, login.Password, login.RememberMe,false);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("GetAllEvents","Event");
+                }
+                ModelState.AddModelError("", "LoginFailed");
+            }
+            return View(login);
         }
     }
 }
