@@ -1,10 +1,12 @@
 ﻿using EventBookingSystem.Models;
 using EventBookingSystem.Repository;
 using EventBookingSystem.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventBookingSystem.Controllers
 {
+    [Authorize]
     public class EventController : Controller
     {
         readonly IEventServices _eventServices;

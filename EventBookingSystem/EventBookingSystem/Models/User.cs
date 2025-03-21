@@ -9,17 +9,19 @@ namespace EventBookingSystem.Models
 // LastName 
 // Email 
 // public ICollection<TicketBooking> TicketBookings
-    public class User:IdentityUser
+    public class User : IdentityUser
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-        //[Required]
+        //[Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //public int Id { get; set; }
+        [Required]
         public string FirstName { get; set; }
-        //[Required]
+        [Required]
         public string LastName { get; set; }
         //[Required]
-        public String Email { get; set; }
+        //public String Email { get; set; }
+        //public string Id {  get; set; }
+        //public IdentityUser IdentityUser { get; set; }
         public ICollection<TicketBooking> TicketBookings { get; set; }
     }
 }

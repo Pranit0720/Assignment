@@ -9,7 +9,7 @@ namespace EventBookingSystem.Controllers
     {
         readonly UserManager<User> _userManager;
         readonly SignInManager<User> _signInManager;
-        public AccountController(UserManager<User> manager,SignInManager<User>signInManager)
+        public AccountController(UserManager<User> manager,SignInManager<User> signInManager)
         {
             _userManager = manager;
             _signInManager = signInManager;
@@ -25,7 +25,7 @@ namespace EventBookingSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                var createdUser = new User { UserName = user.Email, Email = user.Email };
+                var createdUser = new User { UserName = user.Email, Email = user.Email ,FirstName=user.FirstName,LastName=user.LastName};
                 var result = await _userManager.CreateAsync(createdUser, user.Password);
                 if (result.Succeeded)
                 {
