@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATE CSS DIFF</title>
+    <style>
+        .suriseimages{
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+            border-width: 1px;
+            border-color: black;
+        }
+        button{
+            padding: 5px 30px;
+            background: linear-gradient(pink, yellow);
+        }
+    </style>
+</head>
+<body>
+    <button type="button"  id="cssbutton">CSS</button>
+    <figure>
+        <img class="suriseimages" src="https://th.bing.com/th/id/R.3b66decd91b5f9890a0d75bebd22bdd3?rik=EIUY6lhTtpyAiw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f1%2f2%2fa%2f638175.jpg&ehk=YNAN%2biUl2ZtLeocp6DKnNwDKWQ9R4N1gl7yP%2fyeBvfI%3d&risl=&pid=ImgRaw&r=0"
+    alt="sunrise">
+        <img class="suriseimages" src="https://th.bing.com/th/id/R.b181bcd2a50b8664b7e53bda937cdfe4?rik=bDW7uyM4tIeTjg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f9%2f4%2f9%2f637820.jpg&ehk=Rz1HF4bj0HkgKvTxjOi8ZYvYd7EIFK4ajC%2bSc9kiuWE%3d&risl=&pid=ImgRaw&r=0" 
+    alt="sunrise">
+    <figcaption>SunSet</figcaption>
+    </figure>
+    <p id="note">
+        hover on images for apply styling animation
+    </p>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        /*animate only work with numeric properties, color non-numeric*/
+        let newStyle={
+            height: "300px", // work
+            width :'300px', // work
+            border:'4px double green', // nonumeric it will not be applied
+            borderRadius:'50%', // work
+            borderWidth:"4px", // work
+            borderColor:"yellow" // non numeric it will not be applied
+        }
+        let originalStyle={
+            height: "100px",
+            width: "100px",
+            border: "1px solid",
+            borderWidth: "1px",
+            "border-color": "black",
+        }
+
+        let animatestyle={
+            fontSize:"30px"
+        }
+
+        let cssstyle={
+            border:"4px solid blue"
+        }
+        $(".suriseimages").mouseover(function(){
+           // $(this).animate(newStyle); // 400 ms default
+            //$(this).animate(newStyle, 'slow');  // anyms, fast, slow
+          // $(this).animate(newStyle, 2000, 'linear'); // default swing
+          $(this).animate(newStyle, 2000, 'linear', ()=>{
+            $("#note").text("Animation operation completed on hovered image.....");
+          }); 
+        });
+
+        // mouseout : animate(originalStyle)
+        $("#cssdemo").mouseover(function(){
+            $(this).css(newStyle); //numeric+nonnumeric,  it is not effect function, normal dom function
+        }); 
+
+
+        $('#note').dblclick(function(){
+            $(this).animate(animatestyle, function(){
+                $(this).css(cssstyle)
+            })
+        })
+//      method 2
+        $('#note').dblclick(function(){
+            $(this).animate(animatestyle, function(){
+                $(this).css({border:"4px solid blue"})
+            })
+        })
+
+        $("figcaption").css("backgroundColor", "green");
+
+        
+    </script>
+</body>
+</html>

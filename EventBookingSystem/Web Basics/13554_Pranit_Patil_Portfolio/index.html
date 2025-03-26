@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranit Patil</title>
+    <link rel="icon" type="image/x-icon" href="./Images/logo.webp">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <nav>
+        <img src="./Images/newlogo-removebg-preview.png" class="logo">
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <!-- <li><a href="#">Projects</a></li> -->
+            <li><a href="#certificates">Certification</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <img class="icon" width="40" height="40" src="https://img.icons8.com/ios-filled/50/FFFFFF/multiply.png" alt="multiply" onclick="closemenu()"/>
+        </ul>
+        <img class="icon" width="40" height="40" src="https://img.icons8.com/ios-filled/50/FA5252/menu--v1.png" alt="menu--v1" onclick="openmenu()"/>
+    </nav>
+    <div id="header">
+        <div class="container">
+            
+            <div class="header-text" id="home">
+                <p class="name" ><b><span>Pranit </span><span>Patil</span></b></p>
+                <p class="name1">(Trainee Software Engineer)</p>
+                <h3 class="name">Hi, I'm a <span>Software </span><span>Developer</span>.<br>Passionate about coding and web development.</h3>
+            </div>
+        </div>
+    </div>
+    <!-- --------------about------------ -->
+    <div id="about">
+        <div class="container c1">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/IMG_20250215_220445.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"><span>About </span><span>Me</span></h1>
+                    <p> 
+                        I'm a full-stack developer with a strong background in Java. 
+                        I'm passionate about creating innovative software solutions. 
+                        With my degree in Computer Science and experience with technologies like Spring, Hibernate, and Angular, 
+                        I'm confident in my ability to design and develop efficient software systems.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>JAVA</span><br>Web App development</li>
+                            <li><span>MYSQL</span><br>Database Management</li>
+                            <li><span>AWS</span><br>Deploying Applications in Cloud</li>
+                            <div class="badge">
+                                <img src="Images/Certicate/Badge1.png" alt="badge1">
+                                <img src="Images/Certicate/Badge2.png" alt="badge2">
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2025 - Present</span><br>Trainee Software Engineer</li>
+                            <li><span>2023 - 2025</span><br>Data Operator</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>BE from University of Mumbai</li>
+                            <li><span>2019</span><br>HSC from State Board of Maharashtra</li>
+                            <li><span>2017</span><br>SSC from State Board of Maharashtra</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ----------------Certification----------- -->
+    <div id="certificates">
+        <h1 class="sub-title"><Span>Certificates</Span></h1>
+        <div class="certificate-container">
+            <div class="certificate">
+                <img src="Images/Certicate/JavaFullStack.jpg" alt="Certificate 1">
+                <h2 >Java Full-Stack</h2>
+            </div>
+            <div class="certificate">
+                <img src="Images/Certicate/CLF_CO2-AWS.jpg" alt="Certificate 2">
+                <h2>CLF-CO2_AWS</h2>
+            </div>
+        </div>
+    </div>
+<!-- --------------------contact--------------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><img width="20" height="20" src="https://img.icons8.com/color/48/sent--v2.png" alt="sent--v2" class="icon1"/>patilpranit580@gmail.com</p>
+                <p><img width="20" height="20" src="https://img.icons8.com/color/48/apple-phone.png" alt="apple-phone" class="icon1"/>8779296546</p>
+                <div class="social-icons">
+                    <a href="mailto:patilpranit580@gmail.com" target="_blank" title="Mail"><img width="40" height="40" src="https://img.icons8.com/clouds/100/apple-mail.png" alt="apple-mail"/></a>
+                    <a href="https://www.linkedin.com/in/pranit-patil-990613247" title="Linkedin" target="_blank"><img width="40" height="40" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/></a>
+                    <a href="https://github.com/Pranit0720"  target="_blank"><img width="40" height="40" src="https://img.icons8.com/bubbles/100/github.png" alt="github"/></a>
+                </div>
+                <a href="Images/Pranit_Patil.pdf" class="btn btn2" download="Pranit_Patil_Resume.pdf">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer>
+    <p>Copyright ©</p>
+</footer>
+
+
+
+
+    <script src="JavaScript/"></script>
+</body>
+</html>

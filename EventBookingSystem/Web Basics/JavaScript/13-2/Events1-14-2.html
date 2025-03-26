@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            background-position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <img src="../Images/favorite-star-icon.webp" alt="Team India" onmouseover="showalart()">
+    <button type="button" onclick="conformation()">SUBMIT EXAM</button>
+    <input type="text" placeholder="Enter your name" id="myname">
+
+    <script>
+        function showalart(){
+            window.alert("WOW!!!!");
+        }
+        function conformation(){
+            const status=window.confirm("Do you want to submit exam?");
+            if(status){
+                window.alert("Submitted......")
+            }
+        }
+
+        const value=window.prompt("Enter your age to proceed");
+        window.alert("you entered "+value);
+        console.log(typeof value);
+        const parsedValue=parseFloat(value);
+        console.log(typeof parsedValue);
+
+        let inputEl =document.getElementById("myname");
+        inputEl.addEventListener("focus",()=>extractName());
+        inputEl.addEventListener("keyup",()=>extractName());
+
+        function extractName(){
+            console.log("function called...");
+            console.log(inputEl.value);
+            
+            
+        }
+
+
+        
+        
+    </script>
+</body>
+</html>

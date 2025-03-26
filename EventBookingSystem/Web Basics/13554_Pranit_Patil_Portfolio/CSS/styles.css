@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+    /* background-image: url('./Images/BackGround.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 10hv;
+    opacity: 0.5;
+    z-index: -1;
+     */
+}
+.c1{
+    margin-top: 5vh;
+}
+#certificates, #contact{
+    padding-top: 20vh;
+}
+
+ #header{
+    width: 100%;
+    /* height: 10vh; */
+    background-image: url('./Images/BackGround.jpg');
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0.5; */
+    z-index: -1;
+    margin-top: 20vh;
+    
+}
+ .header-text{
+    margin-bottom: 10%;
+ }
+
+.logo{
+    height: 107px;
+    width: 140px;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.9); /*Slight transparency*/
+    position: fixed;
+    height: 20vh;
+    width: 100vw;
+    top: 0;
+    /* z-index: 100; */
+} 
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width:0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text h3 span{
+    font-size:100%; 
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    /* position: relative; */
+}
+/* .header-text h2{
+    font-size: 60px;
+    margin-top: 20px;
+    
+} */
+.name span{
+    font-size: 75px;
+    transition: 0.5s;
+    /* position: absolute; */
+}
+.name span:hover{
+    color: #ff004f;
+}
+.header-text h3 span{
+    transition: 0.5s;
+}
+.header-text h3 span:hover{
+    color: #ff004f;
+}
+.name1{
+    font-size: 25px;
+}
+.header-text{
+    text-align: center;
+}
+
+/* --------------------about--------------- */
+
+#about{
+    width: 100%;
+    /* height: 10vh; */
+    background-image: url('./Images/BackGround.jpg');
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0.5; */
+    z-index: -1;
+    
+}
+#about{
+    padding: 80px 0;
+    color: #ababaa;
+}
+.sub-title span{
+    transition: 0.5s;
+}
+.sub-title span:hover{
+    color: #ff004f;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+    background-color: rgb(39, 38, 38);
+
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.badge img{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+.badge img{
+    transition: 0.5s;
+}
+.badge img:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+/* ------------------Certificate-------------- */
+
+#certificates{
+    width: 100%;
+    height: 150%;
+    background-image: url('./Images/BackGround.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-size: cover; */
+    /* opacity: 0.5; */
+    z-index: -1;
+    
+}
+
+.certificate{
+    margin: 5px;
+}
+.certificate h2{
+    text-align: center;
+    padding-top: 15px;
+}
+
+#certificates{
+    /* margin-bottom: 150px; */
+    height: 650px;
+}
+#certificates h1{
+    /* font-size: ;
+    margin-top: 20px; */
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.certificate {
+    border: 2px solid white;
+    padding: 10px;
+    background: black;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.certificate img {
+    width: 400px;
+    height: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.certificate:hover {
+    transform: scale(1.1);
+    border-color: #ff004f;
+}
+.sub-title span{
+    transition: 0.5s;
+    /* margin-bottom: 100px; */
+}
+.sub-title span:hover{
+    color: #ff004f;
+}
+ 
+/* -------contact------- */
+
+#contact{
+    width: 100%;
+    height: 150%;
+    background-image: url('./Images/BackGround.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-size: cover; */
+    /* opacity: 0.5; */
+    z-index: -1;
+    
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p img{
+    margin-right: 15px;
+    font-size: 25px
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    /* color: #ababab; */
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    /* color: #ff004f; */
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    
+
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff004f;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+    text-decoration: none;
+}
+.contact-right form {
+    width: 100%;
+
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 10px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    /* padding: 25px; */
+    background: #262626;
+    font-weight: 300;
+    /* margin-top: 20px; */
+    height: fit-content;
+}
+
+.icon1{
+    padding: -20px;
+    margin: 0;
+}
+
+#msg{
+    color: #61b752;
+    margin-top: 10px;
+    display: block;
+}
+
+/* -----------------css for small screen------------ */
+
+.icon{
+    display: none;
+}
+@media only screen and (max-width: 663px){
+    #header{
+        background-image: url('Images/Phone\ BackGround.jpg');
+    }
+    #about{
+        background-image: url('Images/Phone\ BackGround.jpg');
+    }
+    #certificates{
+        background-image: url('Images/Phone\ BackGround.jpg');
+        
+    }
+    #certificates{
+        /* margin-bottom: 150px; */
+        height: fit-content;
+    }
+    #contact{
+        background-image: url('Images/Phone\ BackGround.jpg');
+    }
+    .header-text{
+        /* margin-top: 100%; */
+        font-size: 16px;
+        text-align: center;
+        
+    }
+    .header-text h3{
+        font-size: 30px;
+    }
+    .icon{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .icon{
+        position: absolute;
+        top: 25px;
+        left: 15px;
+        cursor: pointer;
+    }
+    .about-col-1 img{
+        height: 400px;
+        width: 300px;
+        position: center;
+    }
+}
+
+
+@media only screen and (max-width: 925px){
+    #header{
+        background-image: url('Images/Phone\ BackGround.jpg');
+    }
+    #about{
+        background-image: url('Images/Phone\ BackGround.jpg');
+    }
+    #certificates{
+        background-image: url('Images/Phone\ BackGround.jpg');
+        
+    }
+    #certificates{
+        height: fit-content;
+    }
+    #contact{
+        background-image: url('Images/Phone\ BackGround.jpg');
+    }
+   
+    
+}
+
+
+
+
+

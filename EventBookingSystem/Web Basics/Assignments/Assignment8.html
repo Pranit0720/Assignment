@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo Element</title>
+    <style>
+      a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+p::after {
+  content: "Hii";
+  text-decoration: underline;
+}
+
+#local-link::before {
+  content: "GM";
+  text-decoration: line-through;
+}
+
+    </style>
+</head>
+<body>
+
+    <p>
+        Learning resources for web developers can be found all over the internet. Try out
+      </p>
+
+      <p id="local-link">
+        Learning resources for web developers can be found all over the internet. Try out
+      </p>
+
+      
+    
+</body>
+</html>

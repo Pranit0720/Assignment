@@ -1,0 +1,17 @@
+  append, prepend, before, after, remove same as js
+        JS           JQUERY
+        innerHTML -> html()
+        innerText, textContent -> text()
+        value -> val()
+        ele.attribute -> selector.prop()
+        classList.add() -> addCLass(),
+        ele.style... -> css();
+        getElementById-> $("#idvalue") 
+        getElementsByClassName-> $(".classvalue") 
+        getElementsByTagName-> $("element") 
+        getElementsByName-> $("[attr=value]") 
+        createElement -> $("<element>")
+        all events -> all event functions
+        no effects without logic -> effect functions
+
+    

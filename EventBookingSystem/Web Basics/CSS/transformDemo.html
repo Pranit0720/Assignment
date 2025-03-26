@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .div{
+        height: 60px;
+        width: 60px;
+        border: 1px solid black;
+        background-image: linear-gradient(to bottom,red,blue,green);
+        transition: 2s;
+
+    }
+    #div1:hover{
+        transform: translatex(200px);
+        transform: translateY(300px);
+        transform: translate(200px,300px);
+        transform: translate(200px);/*X*/
+
+    }
+
+    #div2:hover{
+        transform: rotate(45deg);/*ClockWise by default*/
+        transform: rotate(-45deg);/*anticlockwise*/
+        transform: rotate(360deg);
+        transform: rotate(6.28rad); /*radian angle*/
+        transform: rotatex(180deg);
+        transform: rotateX(80deg);
+        transform: rotateY(80deg);
+        
+    }
+    #div3:hover{
+            transform: scale(3); /*number * orignal dimension */
+            transform: scale(2, 4);/*w,h*/
+            transform: scale(-2);
+        }
+
+        #div4:hover{
+            transform: skew(45deg, 34deg);
+            transform: skew(45deg);
+            transform: skewX(45deg);
+            transform: skewY(45deg);
+        }
+        #scaledemo{
+            transition: 0.5s;
+        }
+        figure{
+            border:10px solid;
+            overflow: hidden;
+            display: inline-block;
+        }
+        #scaledemo:hover{
+            transform: scale(2);
+        }
+
+    </style>
+    
+</head>
+<body>
+    <section class="div" id="div1">Lorem ipsum dolor.</section>
+    <section class="div" id="div2">Lorem ipsum dolor.</section>
+    <section class="div" id="div3">
+        India is my country
+        
+    </section>
+    <section class="div" id="div4">
+        India is my country
+        
+    </section>
+    <figure>
+        <img id="scaledemo" src="./Images/image1.jpg" alt="sunset" height="100" width="100">
+    </figure>
+    
+</body>
+</html>

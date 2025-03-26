@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gridcontainer{
+            width: 600px;
+            display: grid;
+            border: 5px solid ;
+            grid-template-columns: [c1]auto [c2] auto [c3] auto [c4] auto [c5] ;
+            /* grid-template-columns: 100px 50% auto auto; */
+            grid-template-rows: [r1]auto [r2] auto [r3] auto [r4] ;
+            
+
+        }
+    
+        
+        #item3{
+            grid-column-start: c4;
+            grid-row-start: r1;
+            grid-row-end: r3;
+        }
+        #item9{
+            grid-column-start: c3;
+            grid-column-end: c5;
+        }
+        .griditem{
+            border: 2px solid green;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="gridcontainer">
+        <section class="griditem" id="item0">0</section>
+        <section class="griditem" id="item1">1</section>
+        <section class="griditem" id="item2">2</section>
+        <section class="griditem" id="item3">3</section>
+        <section class="griditem" id="item4">4</section>
+        <section class="griditem" id="item5">5</section>
+        <section class="griditem" id="item6">6</section>
+        <section class="griditem" id="item7">7</section>
+        <section class="griditem" id="item8">8</section>
+        <section class="griditem" id="item9">9</section>
+    </div>
+</body>
+</html>

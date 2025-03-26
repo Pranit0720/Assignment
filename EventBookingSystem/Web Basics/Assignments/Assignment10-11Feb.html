@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo Element</title>
+    <style>
+      a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+p::after {
+  content: "Pranit";
+  text-decoration: underline;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#local-link::before {
+  content: url(../Images/favorite-star-icon.webp);
+  position:absolute; 
+  z-index: -1;
+ 
+}
+    </style>
+</head>
+<body>
+
+    <p>
+        Learning resources for web developers can be found all over the internet. Try out
+      </p>
+
+      <p id="local-link">
+        Learning resources for web developers can be found all over the internet. Try out
+      </p>
+
+      
+    
+</body>
+</html>

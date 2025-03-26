@@ -38,7 +38,7 @@ namespace EventBookingSystem.Repository
 
         public async Task<IEnumerable<Event>> GetAllEvents()
         {
-            return await _bookingContext.Events.ToListAsync();
+            return await _bookingContext.Events.Where(tb=>tb.Date>DateTime.Now).ToListAsync();
         }
 
 

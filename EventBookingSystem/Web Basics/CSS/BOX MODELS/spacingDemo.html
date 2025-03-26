@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacing</title>
+    <style>
+      /*padding : spacing given inside the selected element*/
+      /*margin : spacing given ouside of selected element*/
+        body{
+            border: 3px solid red;
+        }
+        article
+        {
+            border: 3px solid green;
+        }
+        header{
+            border: 3px solid pink;
+            width: 10in; 
+            height: 500px; 
+            padding: 20px;
+        }
+        h1, p{
+            border: 2px solid blue;
+            word-wrap: break-word; 
+        }
+        p{
+           padding: 20px;
+           padding : 10px 30px ; /* t, r  b==t l==r*/
+           padding : 10px 30px 5px; /*t, r, b, l==r*/
+           padding : 10px 0px 0px 10px ;/*t, r, b, l*/
+
+           margin-top: 30px;
+        }
+        b{
+            border: 1px solid darkcyan;
+        }
+        h1{
+            width: 50%; 
+            height: 3cm;
+            padding-left: 10px;
+            padding-top: 10px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+        b{
+            /*no dimensions to inline elements*/
+            height: 50px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>DIMENSION DEMO</h1>
+            <p>
+                Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Quidem, minus! Iste dolorum optio consectetur magni alias officia eligendi vel facilis, voluptatibus 
+                ducimus aperiam velit! Odit quod accusantium maxime deserunt explicabo!
+                Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Quidem, minus! Iste dolorum optio consectetur magni alias officia eligendi vel facilis, voluptatibus 
+                ducimus aperiam velit! Odit quod accusantium maxime deserunt explicabo!
+            </p>
+        </header>
+    </article>
+</body>
+</html>

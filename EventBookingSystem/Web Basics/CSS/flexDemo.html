@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Demo</title>
+    <style>
+        #locationsflex>div{
+            border : 1px solid ;
+            background: rgb(188, 188, 107);
+            
+        }
+        #locationsflex{
+            height: 600px;
+            background: rgb(238, 238, 238);
+            border : 1px solid ;
+            display: flex;
+            flex-direction: row;  /*default*/
+            flex-wrap: wrap;  /*no-wrap (default), wrap, wrap-reverse*/
+            justify-content:center; /*left, right : global, flex-start, flex-end*/
+            /* align-content: center; */ /*stretch*/
+             align-content: center; /*align-items: center row wise veritical alignment*/
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="locationsflex">
+        <div>
+           <h2> Dadar, Mumbai (Headquarters)1</h2>
+            <p>The Ruby Tower, Senapati Bapat Marg, Dadar West, Mumbai, Maharashtra 400028</p>
+        </div>
+        <div>
+            <h2> Dadar, Mumbai (Headquarters)2</h2>
+             <p>The Ruby Tower, Senapati Bapat Marg, Dadar West, Mumbai, Maharashtra 400028</p>
+         </div>
+         <div>
+            <h2> Dadar, Mumbai (Headquarters)3</h2>
+             <p>The Ruby Tower, Senapati Bapat Marg, Dadar West, Mumbai, Maharashtra 400028</p>
+         </div>
+         <div>
+            <h2> Dadar, Mumbai (Headquarters)4</h2>
+             <p>The Ruby Tower, Senapati Bapat Marg, Dadar West, Mumbai, Maharashtra 400028</p>
+         </div>
+         <div>
+            <h2> Dadar, Mumbai (Headquarters)5</h2>
+             <p>The Ruby Tower, Senapati Bapat Marg, Dadar West, Mumbai, Maharashtra 400028</p>
+         </div>
+         <div>
+            <h2> Dadar, Mumbai (Headquarters)6</h2>
+             <p>The Ruby Tower, Senapati Bapat Marg, Dadar West, Mumbai, Maharashtra 400028</p>
+         </div>
+    </div>
+</body>
+</html>

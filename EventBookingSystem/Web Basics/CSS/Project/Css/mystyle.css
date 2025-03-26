@@ -1,0 +1,110 @@
+/*give darkmagenta color to all paragraphs of web application*/
+
+
+
+/*ele sel*/
+p{
+    color: darkmagenta;
+    text-decoration: underline !important;
+}
+/*make 1st paragraph all letter capital on all web pages */
+.first{
+    text-transform: uppercase;
+    text-decoration: overline;
+}
+/*1st paragraph of contact page should have border*/
+#firstoncontact{
+    border: 2px solid;
+    text-decoration: line-through;
+}
+/*1st and last paragraph of contact page should have background color*/
+.bgcol{
+    background-color: rgb(239, 239, 92);
+}
+/*set textcolor to tags having attribute type*/
+[type]{
+    color: darkorange;
+}
+/*set border to inputfields having attribute type*/
+input[type]{
+    border: 5px blue solid;
+}
+/*set dimensions to email field*/
+input[type='email']{
+    width: 200px;
+    height: 30px;
+}
+
+/* 1. Select all elements of document and apply style
+*{
+    text-decoration: underline;
+}
+
+/* 2. Select all headings using group selection.
+
+h1,h2,h3,h4,h5,h6{
+    color: rgb(0, 255, 0);
+}
+
+/* 3. Select paragraphs having class 'india' to apply style 
+
+p.india{
+    text-align: center;
+}
+
+/* 4. select elements having class 'india'
+
+.india{
+    background-color: red;
+}  */
+
+
+
+/*precedence,
+!important*/
+
+/*attribute selector  and class selector have same precedence if
+[attribute],[attribute=value] .  */
+
+/*attribute selector has more precedence than class selector if
+ele[], . */
+
+/* [attribute], [attribute and value ] both have same precedence*/
+.messages{
+    background-color: lightgreen ;
+} 
+
+[type='A']{
+    background-color: lightblue;
+}
+
+[type]{
+    background-color: lightpink;
+}
+
+.topnavbar li{
+
+    display: inline-block;
+    padding: 15px;
+}
+
+.topnavbar {
+    background-color: black;
+    padding: 5px;
+}
+.topnavbar a{
+    color: white;
+    text-decoration: none;
+}
+.topnavbar a:link{
+    color: yellow;
+}
+.topnavbar a:visited{
+    color: red;
+}
+.topnavbar a:hover{
+    background-color: aqua;
+}
+.topnavbar a:active{
+    background-color: hotpink;
+}

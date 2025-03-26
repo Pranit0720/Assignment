@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Controls</title>
+</head>
+<body>
+    <h3>Neosoft Course Registation Form</h3> 
+    <form action="servlet path" method="post">
+        <label>Enter your name:</label>
+        <label for="fname">First name</label>
+        <input id="fname" class="empname" name="empname" value="neo" minlength="2" required> 
+        <input id="mname" type="text" title="middle name" class="empname" name="empname"> 
+        <input id="lname" type="text"  placeholder="last name" class="empname" name="empname" required>
+    </div>
+    <div>
+        <label for="">Select Courses to entroll</label>
+        <input required checked type="checkbox" id="cb1"  name="courses" value="web basics"><label for="cb1" >WEB BASICS</label>
+        <input type="checkbox" id="cb2"  name="courses" value="react"><label for="cb2">REACT</label>
+        <input type="checkbox" id="cb3"  name="courses" value="angular"><label for="cb3">ANGULAR</label>
+        <input type="checkbox" id="cb4"  name="courses" value="node"><label for="cb4">NODE</label>
+    </div>
+    <div>
+        <label for="department">Select your Department:</label>
+        <select name ="deparment" id="department">
+            <option value="dotnet" selected>Dot Net</option>
+            <option value="devops">DevOps</option>
+            <option value="javaweb">Java Web</option>
+            <option value="learninganddevelopment">L&D</option>
+        </select>
+    </div>
+    </form>
+    <script>
+       const nameelements=document.getElementsByName("empname");
+       console.log(nameelements);
+       
+    </script>
+</body>
+</html>

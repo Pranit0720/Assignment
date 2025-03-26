@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter your name</h3>
+
+    <div>
+        <input type="text"  value="Neosoft pvt Ltd" title="Company name" readonly>
+    </div>
+    <div>
+    <form action="servlet path">
+    <label for="fname">First Name</label>
+    <div>
+    <input id="fname" name="empname" minlength="2" required>
+    <input id="mname"type="text" title="Middel name" name="empname">
+    <input id="lname" type="text" placeholder="Last name"name="empname" required>
+    </div>
+    <div>
+        <input type="" placeholder="age" min="20" max="40" required>
+    </div>
+
+    <div>
+        <label for="mobile">Enter mobile number</label>
+        <input type="tel" id="mobile" minlength="10" maxlength="10"  pattern="[0-9]*" title="only numbers are allowed" required>
+
+    </div>
+
+    <div>
+        <label for="emailid">Enter Email Id</label>
+        <input type="email" required>
+    </div>
+
+    <div>
+        <label for="">Select Courses to entroll</label>
+        <input type="checkbox" id="cb1" name="courses" value="Web Basics"><label for="cb1">web Basics</label>
+        <input type="checkbox" id="cb2" name="courses" value="React"><label for="cb2">React</label>
+        <input type="checkbox" id="cb3" name="courses" value="Angular"><label for="cb1">Angular</label>
+        <input type="checkbox" id="cb4" name="courses" value="Node"><label for="cb1">Node</label>
+    </div>
+
+    <div>
+        <label for="">Gender:</label>
+            <input type="radio" id="gender1" name="gender" value="Male"><label for="gender1">Male</label>
+            <input type="radio" id="gender2" name="gender" value="Female"><label for="gender2">Female</label>
+            <input type="radio" id="gender3" name="gender" value="Other"><label for="gender3">Other</label>
+    </div>
+
+    <div>
+        <label for="dept">Select you dept</label>
+        <select name="dept" id="dept">
+            <option value="DotNet" selected>DotNet</option>
+            <option value="Devops">Devops</option>
+            <option value="java">Java</option>
+        </select>
+
+    </div>
+
+    <div>
+        <label for="">Add Comment: </label>
+        <textarea rows="5" cols="20" placeholder="Please Write Comment Here"></textarea>
+    </div>
+
+    <div>
+        <datalist id="places">
+            <option value="dadar">Dadar</option>
+            <option value="parel">Parel</option>
+            <option value="rabale">Rebale</option>
+        </datalist>
+        <label for="place">From where u want to attend the course:</label>
+        <input type="text" list="places" id="place">
+    </div>
+
+    <div>
+        <input type="submit">
+    </div>
+
+    <div>
+        <!-- Submit -->
+        <label for="submit"></label>
+        <input type="submit" name="form" id="submit">
+        <!-- <button type="submit" title="submit"><img src="https://i.redd.it/r8bcwr08jaf81.jpg" alt="Submit" height="100" width="100"></button> -->
+         <input type="image" src="../Images/submit.jpg" height="100" width="100" title="Enroll">
+
+        <!-- Reset -->
+        <label for="reset"></label>
+        <input type="reset" name="form" id="reet">
+
+        <button type="reset">Reset</button>
+    </div>
+    </form>
+    </div>
+
+
+
+
+
+
+    <script>
+        document.getElementById("fname").value;
+        document.getElementsByName("empname");
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Demo</title>
+    <style>
+        #p1{
+           /*give top border 1px solid*/
+           border-top-width: 1px;
+           border-top-style: solid;
+           border-top-color: red;
+
+           border-top: 1px solid red; /*sequence does not matter*/
+           border-left: 2px dotted green;
+           border-right:3px dashed pink;
+           border-bottom: 4px double darkred;
+
+           /*what is the shorthand to give dift width to all the sides*/
+           border-width: 10px ;
+           border-width: 10px 3px 5px 2px;
+           border-style: solid;
+           border-color:yellow;
+           border: 5px blue double; /*all sides*/
+          
+
+            border-radius: 20px;
+            border-radius: 10px 20px; /*t-l, t-r, b-r, b-l*/
+            border-radius: 10px 20px 0px 30px; 
+        }
+        #bradius{
+            height: 200px;
+            width: 500px;
+            border: 3px solid red;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 200px; /*vertical alignment of text*/
+           
+        }
+        #bimage{
+            height: 200px;
+            width: 500px;
+            border: 3px solid pink;
+           
+        }
+       
+    </style>
+</head>
+<body>
+    <div>
+        <p id="p1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </p>
+        <section id="bradius">
+           <span>india is my country</span>
+        </section>
+        <section id="bimage">
+            india is my country
+        </section>
+    </div>
+</body>
+</html>

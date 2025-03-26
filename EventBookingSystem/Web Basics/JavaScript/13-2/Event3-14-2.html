@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b id="rangeop"></b>
+    <span id="minrange"></span>
+    <input type="range" title="agerange" id="agerange" min="18" max="50" onchange="getValue()" oninput="getValue()">
+    <span id="maxrange"></span>
+
+
+
+    <script>
+        let inputEl=document.getElementById("agerange");
+        let bele = document.getElementById("rangeop");
+        let sample1=document.getElementById("minrange");
+        let sample2=document.getElementById("maxrange");
+
+        inputEl.max=100;
+        sample1.textContent=inputEl.min;
+        function getValue(){
+            bele.textContent=inputEl.value;
+        }
+        sample2.textContent=inputEl.max;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar{
+            background-color: black;
+
+        }
+        #navbar>ol{
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            list-style-type: none;
+        }
+
+        #navbar a{
+            color: white;
+            text-decoration: none;
+        }
+        @media screen and (max-width: 768px){
+            /* Stack navbar */
+            #navbar>ol{
+                flex-direction: column;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ol id="ol">
+            <li><a href="#">LINK</a></li>
+            <li><a href="#">LINK</a></li>
+            <li><a href="#">LINK</a></li>
+            <li><a href="#">LINK</a></li>
+            <li><a href="#">LINK</a></li>
+        </ol>
+    </nav>
+</body>
+</html>

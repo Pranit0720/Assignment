@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .suriseimages{
+            height: 400px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="chaining">START CHAINING</button><br>
+    <img class="suriseimages" src="https://th.bing.com/th/id/R.3b66decd91b5f9890a0d75bebd22bdd3?rik=EIUY6lhTtpyAiw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f1%2f2%2fa%2f638175.jpg&ehk=YNAN%2biUl2ZtLeocp6DKnNwDKWQ9R4N1gl7yP%2fyeBvfI%3d&risl=&pid=ImgRaw&r=0"
+    alt="sunrise">
+    <img class="suriseimages" src="https://th.bing.com/th/id/R.b181bcd2a50b8664b7e53bda937cdfe4?rik=bDW7uyM4tIeTjg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f9%2f4%2f9%2f637820.jpg&ehk=Rz1HF4bj0HkgKvTxjOi8ZYvYd7EIFK4ajC%2bSc9kiuWE%3d&risl=&pid=ImgRaw&r=0" 
+    alt="sunrise">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        /*when u click on button do following callback
+        1. sunriseimages must be hidden
+        2. must be shown
+        3. must be fadedout
+        4. must be faded in 
+        5. must be slidedup
+        6. slided down*/
+       /*  $("#chaining").click(()=>{
+            $(".suriseimages").hide(500,()=>{
+                $(".suriseimages").show(600,()=>{
+                    $(".suriseimages").fadeOut(700, ()=>{
+                        $(".suriseimages").fadeIn(200);
+                    });
+                } );
+            });
+        }); */
+    /*if we have same selection in callback then replace the callback with the chaining*/
+    $("#chaining").click(()=>{
+        $(".suriseimages").hide(300).show(500).fadeOut(700).fadeIn(800).slideUp(900).slideDown(1000);
+    });
+       // $(".suriseimages").hide(300).show(500).fadeOut(700).fadeIn(800).slideUp(900).slideDown(1000);
+    </script>
+</body>
+</html>

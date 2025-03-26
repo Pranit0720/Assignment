@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Controls</title>
+    <style>
+        #coursesSection{
+            border:2px solid blue;
+        }
+        .checkBoxLabel{
+            margin-right: 20px;
+        }
+       /*  #coursesSection:hover{
+            background-image: linear-gradient(pink, yellow);
+        } */
+        .courseStyle{
+            background-image: linear-gradient(yellow, pink);
+            border: 4px double purple;
+        }
+    </style>
+</head>
+<body>
+    <h3>Neosoft Course Registation Form</h3> 
+    <form action="servlet path"   onsubmit="collectname()">
+        <label>Enter your name:</label>
+        <label for="fname">First name</label>
+        <input id="fname" class="empname" name="empname" value="neo" minlength="2" required> 
+        <input id="mname" type="text" title="middle name" class="empname" name="empname"> 
+        <input id="lname" type="text"  placeholder="last name" class="empname" name="empname" required>
+    </div>
+    <div id="coursesSection" onmouseover="setStyle()" onmouseout="resetStyle()" class="abc">
+        <label for="">Select Courses to entroll :</label> <br>
+    </div>
+    <div>
+        <label for="department">Select your Department:</label>
+
+        <select name ="deparment" id="department" onchange="getdep()">
+            <option value="dotnet" selected>Dot Net</option>
+            <option value="devops">DevOps</option>
+            <option value="javaweb">Java Web</option>
+            <option value="learninganddevelopment">L&D</option>
+        </select>
+        <input type="submit">
+    </div> 
+    </form>
+    <script>
+        const nameelements=document.getElementsByName("empname");
+        console.log(nameelements);
+        let myname="";
+        function collectname(){
+            event.preventDefault();
+            for(let nameele of nameelements )
+                myname=myname+" "+nameele.value;
+            console.log(myname.trim());
+        }
+        const courses=['java', 'node','web basics', 'angular']; // courses
+        courses.sort();
+        const courseSection=document.getElementById("coursesSection"); // parent
+        for(let i=0;i<courses.length;i++){
+            //DOM method
+            const checkEle=document.createElement('input');
+            checkEle.type="checkbox";
+            checkEle.name="companycourses";
+            checkEle.value=courses[i];
+            checkEle.id="course"+i;
+            const label=document.createElement('label');
+            label.textContent=courses[i].toUpperCase();
+            label.id='label'+i;
+            label.classList.add('checkBoxLabel'); // bcz class attribute may contain many values
+            courseSection.append(checkEle); // parentelement.append.chidlelement
+            courseSection.append(label);
+        }
+
+        function setStyle(){
+           // courseSection.style.backgroundImage='linear-gradient(yellow, pink)'; // style: DOM property
+           // courseSection.style.border='4px double violet'  // inline style
+
+          //  courseSection.style.cssText=
+            //"background-image:linear-gradient(yellow, pink); border:4px double purple" // inline style
+            courseSection.classList.add("courseStyle"); // it will not override existing classes
+        }
+        function resetStyle(){
+         //   courseSection.style="";
+         courseSection.classList.remove("courseStyle");
+        }
+     
+        const checkboxList=document.getElementsByName('companycourses');
+        let selectedCourses=[];
+        for(let checkbox of checkboxList){ 
+            checkbox.addEventListener('change', ()=>{
+                selectedCourses=[];
+                for(let checkbox of checkboxList)
+                    {
+                        if(checkbox.checked)
+                            selectedCourses.push(checkbox.value);
+                    }
+                console.log(selectedCourses);
+            })
+        }
+
+        function getdep(){
+            console.log(event.target.value);
+        }
+
+        // to give style to all lable tags
+
+        const lables=document.getElementsByTagName('lable');
+        console.log(lables);
+
+        for(let lable of lables){
+            lable.style.color="darkblue";
+        }
+
+        // getElementById, getElementByName, getElementByTagName, getElementByClassName
+        
+
+    </script>
+</body>
+</html>

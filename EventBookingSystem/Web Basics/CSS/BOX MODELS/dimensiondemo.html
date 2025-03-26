@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            border: 3px solid red;
+        }
+        article
+        {
+            border: 3px solid green;
+        }
+        header{
+            border: 3px solid pink;
+            width: 10in; /*explicit width*/ /*px, cm, in, m*/
+            height: 500px; /*fix height*/
+        }
+        h1, p{
+            border: 2px solid blue;
+            word-wrap: break-word; /*when no space*/
+        
+        }
+        p{
+            height: 50%; /*when we have explicit height to parent then only % will work*/
+        }
+        b{
+            border: 1px solid darkcyan;
+        }
+        h1{
+            width: 50%; /* n% of parent*/
+            height: 3cm;
+        }
+       
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Dimension Demo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor possimus iure perspiciatis? Unde libero, 
+                asperiores aliquam saepe cumque sapiente tempore culpa. 
+                Aut reprehenderit nam temporibus, dolor voluptatibus esse et nulla!</p>
+        </header>
+    </article>
+</body>
+</html>

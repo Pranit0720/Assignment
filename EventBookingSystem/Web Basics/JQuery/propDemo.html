@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Props</title>
+</head>
+<body>
+    <input id="fname" name="myname" type="text" placeholder="enter your Firstname" value="pooja">
+    <input name="myname" type="text" placeholder="enter your lastName" value="pawar">
+    <b id="firstname"></b> 
+    <b id="lastname"></b> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        console.log($('#fname').prop("type")); 
+        console.log($('#fname').prop("placeholder")); // jquery
+        const fele=document.getElementById("fname");
+        console.log(fele.type); //js
+
+        $('input[name="myname"]').keyup(function(){
+            let name= $(this).val(); 
+            let placeholder=$(this).prop("placeholder");
+            if(placeholder.toLowerCase().includes("firstname"))
+            $("#firstname").text(name);
+            if(placeholder.toLowerCase().includes("lastname"))
+            $("#lastname").text(name);  
+        });
+    </script>
+</body>
+</html>

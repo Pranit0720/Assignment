@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        .errorMessage{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h4>User Registration</h4>
+   
+    <form action="abcd" novalidate onsubmit="return validateAll()">
+        <div>
+            <label for="username">Set Username:</label>
+            <input type="text"  id="username" onblur="validateUsername()" required>
+        </div>
+        <div class="errorMessage">
+            <small id="usererror"></small>
+        </div>
+        <br>
+        <div>
+            <label for="password">Set Password:</label>
+            <input type="text"  id="password" onblur="validatePassword()" required>
+        </div>
+        <div class="errorMessage">
+            <small id="passerror"></small>
+        </div>
+        <br>
+        <div>
+            <label for="confpassword">Confirm Password:</label>
+            <input type="text"  id="confpassword"  onblur="validateConfirmPassword()"  required>
+        </div>
+        <div class="errorMessage">
+            <small id="cpasserror"></small>
+        </div>
+        <input type="submit" value="REGISTER">
+    </form>
+
+    <script>
+        const usernameEle=document.getElementById("username");
+        const passEle=document.getElementById("password");
+        const cpassEle=document.getElementById("confpassword");
+        const userErrorEle=document.getElementById('usererror');
+        const passErrorEle=document.getElementById('passerror');
+        const cpassErrorEle=document.getElementById('cpasserror');
+
+        const passwordPattern=new RegExp("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#&]).*");
+        function validateUsername(){
+            const username=usernameEle.value;
+            if(username==""){
+                userErrorEle.textContent="username is required";
+                return false;
+            }
+            else{
+                userErrorEle.textContent="";
+                usernameEle.style.border='2px solid green';
+                return true;
+            }
+        }
+        function validatePassword(){
+            const password=passEle.value;
+            if(password==""){
+                passErrorEle.textContent="password is required";
+                return false;
+            }
+            else if(passwordPattern.test(password)==false){
+                passErrorEle.textContent="password must have atleast..........";
+                return false;
+            }
+            else if(password.length<8 || password.length>12){
+                passErrorEle.textContent="password must be 8 to 12 characters long"
+                return false;
+            }
+            else{
+                passErrorEle.textContent="";
+                passEle.style.border='2px solid green';
+                return true;
+            }
+        }
+        function validateConfirmPassword(){
+            const confirmpassword=cpassEle.value;
+            const password=passEle.value;
+            if(confirmpassword==""){
+                cpassErrorEle.textContent="password confirmation is required";
+                return false;
+            }
+            else if(confirmpassword!=password){
+                cpassErrorEle.textContent="password must match"
+                return false;
+            }
+            else{
+                cpassErrorEle.textContent="";
+                cpassEle.style.border='2px solid green';
+                return true;
+            }
+        }
+        function validateAll(){
+            const b1=validateUsername(); // true
+            const b2=validatePassword(); // true
+            const b3=validateConfirmPassword(); // true
+            return (b1 && b2 && b3)
+            
+        }
+    </script>
+</body>
+</html>

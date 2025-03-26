@@ -1,0 +1,72 @@
+﻿@model IEnumerable<EventBookingSystem.Models.TicketBooking>
+
+@{
+    ViewData["Title"] = "AllBookings";
+}
+
+<h1>AllBookings</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Event)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Event.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+
+                    @if (item.Status == BookingStatus.Confirmed)
+                    {
+                        @* if (item.Event.AvailableSeats != 0) *@
+                        @* { *@
+
+                        @*     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> *@
+                        @* } *@
+                        @if ((item.Event.Date - DateTime.Now).TotalDays > 2)
+                        {
+
+                            <form asp - controller="BookingTicket" asp - action="CancelBooking" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button type="submit" class="btn btn-danger">Cancel</button>
+                            </form>
+                        }
+                    }
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

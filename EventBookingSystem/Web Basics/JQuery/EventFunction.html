@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter your firstname" value="pooja">
+    <input type="text" placeholder="enter your lastname" value="pawar">
+    <b id="nameele"></b> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $('[type="text"]').focus(function(){
+            $(this).css("border",'4px solid blue'); // current focused element
+        });
+        $('[type="text"]').keyup(function(){
+           let name= $(this).val(); // current keyup element
+          $("#nameele").text(name);
+        });
+       console.log($('[type="text"]').css("border-radius", '30px')); // style on multiple selection
+       console.log($('[type="text"]').val()); // first value
+       // in above case external looping needed
+       $('[type="text"]').each((index,ele)=>{
+        // console.log(index);
+        // console.log(ele);
+        console.log(ele.value);
+   
+       })
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Up/Slide Down using jQuery Demo</title>
+    <style>
+        img {
+            width: 200px;
+        }
+        button {
+            padding: 10px;
+            background: linear-gradient(blue, white);
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="eventBtn">SLIDE UP</button>
+    <button type="button" id="toggleBtn">SLIDE TOGGLE</button>
+    <figure>
+        <img class="catImg" src="../Assignments/Img/1.jpg" alt="Fat Fat Panko Cat">
+        <img class="catImg" src="../Assignments/Img/2.jpg" alt="Lizzy">
+        <img class="catImg" src="./resources/catImages/smudge.jpg" alt="Smudge">
+        <img class="catImg" src="./resources/catImages/larry.jpg" alt="Larry">
+        <img class="catImg" src="./resources/catImages/bingus.jpg" alt="Bingus">
+    </figure>
+    <p>Above images will disappear or appear with hide() effect of jQuery.</p>
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $("#eventBtn").click(() => {
+            const btnLabel = $("#eventBtn").text();
+            if(btnLabel == "SLIDE UP") {
+                $(".catImg").slideUp(1000, () => {
+                    $("#eventBtn").text("SLIDE DOWN");
+                });
+            } else {
+                $(".catImg").slideDown(1500, () => {
+                    $("#eventBtn").text("SLIDE UP");
+                });
+            }
+        });
+
+        $("#toggleBtn").click(() => {
+            $(".catImg").slideToggle(500, () => {
+                console.log("Operation Performed...");
+            });
+        });
+    </script>
+</body>
+</html>

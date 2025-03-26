@@ -14,12 +14,19 @@ namespace EventBookingSystem.Controllers
         {
             _eventServices = eventServices;
         }
+        [Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> GetAllEvents()
         {
             return View(await _eventServices.GetAllEvents());
         }
+        [AllowAnonymous]
+        public async Task<IActionResult> GetAllEventsForUser()
+        {
+            return View(await _eventServices.GetAllEvents());
+        }
 
+        [Authorize(Roles ="Admin")]
         [HttpGet]
         public async Task<IActionResult> AddEvent()
         {
@@ -35,14 +42,14 @@ namespace EventBookingSystem.Controllers
                 int result = await _eventServices.AddEvents(events);
                 if (result > 0)
                 {
-                    TempData["message"] = "Book Added Succesfully!!";
+                    TempData["message"] = "Event Added Succesfully!!";
 
                     return RedirectToAction("GetAllEvents");
 
                 }
                 else
                 {
-                    TempData["mess"] = "Book Addition Failed!!";
+                    TempData["mess"] = "Event Addition Failed!!";
                     return View(events);
                 }
                 
@@ -51,6 +58,7 @@ namespace EventBookingSystem.Controllers
             }
             return View(events);
         }
+        [Authorize(Roles = "Admin")]
 
         [HttpGet]
         public async Task<IActionResult> Update(int id)
@@ -66,6 +74,8 @@ namespace EventBookingSystem.Controllers
             return RedirectToAction("GetAllEvents");
 
         }
+        [Authorize(Roles = "Admin")]
+
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
@@ -77,6 +87,13 @@ namespace EventBookingSystem.Controllers
         public async Task<IActionResult> Delete(Event events)
         {
             var fun=await _eventServices.Delete(events.Id);
+            if (fun > 0)
+            {
+                TempData["message"] = "Event Deleted Succesfully!!";
+
+                return RedirectToAction("GetAllEvents");
+            }
+            TempData["message"] = "Event Deletion Failed!!";
             return RedirectToAction("GetAllEvents");
 
         }

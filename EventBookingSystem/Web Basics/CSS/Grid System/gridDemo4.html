@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Areas</title>
+    <style>
+       
+         .griditem{
+            border:5px double darkgreen
+         }
+         #leftnav{
+            grid-area: leftnavbar; /*custom name*/
+         }
+         #main{
+            grid-area: mainsection;
+         }
+         #advertisement{
+            grid-area: advertisesection;
+         }
+         #header{
+            grid-area: header;
+         }
+         #footer{
+            grid-area: footer;
+         }
+         #subsection{
+            grid-area: subsection;
+         }
+         #gridcontainer{
+            border:5px solid;
+            display: grid;
+
+            grid-template-areas: 
+            'header header header header header'
+            'leftnavbar mainsection mainsection mainsection advertisesection'
+            'leftnavbar subsection subsection subsection subsection'
+            'footer footer footer footer footer';
+         }
+         #topnavbar li{
+            display: inline-block;
+         }
+    </style>
+</head>
+<body>
+    <div id="gridcontainer">
+        <header class="griditem" id="header">
+            <h1>BRAND NAME</h1>
+            <nav id="topnavbar">
+                <ol>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li><li>
+                    <a href="#">link</a></li>
+                </ol>
+            </nav>
+        </header>
+        <div class="griditem" id="leftnav">
+            <nav>
+                <ol>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li><li>
+                    <a href="#">link</a></li>
+                </ol>
+            </nav>
+        </div>
+        <main class="griditem" id="main">MAIN</main>
+        <div class="griditem" id="advertisement"> ADVERTISE</div>
+        <div class="griditem" id="subsection"> SUBSECTION</div>
+        <footer  class="griditem" id="footer">FOOTER</footer>
+    </div>
+</body>
+</html>

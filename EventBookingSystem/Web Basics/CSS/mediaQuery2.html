@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gridcontainer{
+            border: 4px solid;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+        figure{
+            border: 4px solid green;
+            margin: 0px;
+            overflow: hidden;
+        }
+        @media screen and (max-width: 768px){
+            .gridcontainer{
+                grid-template-columns: auto auto;
+            }
+            
+        }
+        @media screen and (max-width: 576px){
+            .gridcontainer{
+                grid-template-columns: auto;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="gridcontainer">
+        <figure>
+            <img src="./Images/image1.jpg" alt="">
+        </figure>
+        <figure>
+            <img src="./Images/image1.jpg" alt="">
+        </figure>
+        <figure>
+            <img src="./Images/image1.jpg" alt="">
+        </figure>
+        <figure>
+            <img src="./Images/image1.jpg" alt="">
+        </figure>
+       
+    </div>
+</body>
+</html>

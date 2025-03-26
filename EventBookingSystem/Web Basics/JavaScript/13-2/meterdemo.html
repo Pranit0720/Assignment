@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="fuelindicator">Fuel Indicator:</label> 
+    <div>
+        <!-- if optimum between high and max then
+         safer: high to max, warning : low to <high, danger : min to <low -->
+        <span>0</span><meter id="fuelindicator" min="0" low="20" value="5" optimum="92" high="90"  max="100"></meter><span>100</span>
+    </div>
+  <button type="button" onclick="EmptyFuel()">START RACE</button>
+  <button type="button" onclick="fillFuel()">FILL FUEL</button>
+
+  <script>
+    const fuleMeter=document.getElementById("fuelindicator");
+    // fuleMeter.value=fuleMeter.min;
+    function fillFuel(){
+        const fillInterval=window.setInterval(()=>{
+            fuleMeter.value++;
+            if(fuleMeter.value==fuleMeter.max){
+                window.clearInterval(fillInterval);
+            }
+        }, 50)
+    }
+    function EmptyFuel(){
+        const fillInterval=window.setInterval(()=>{
+            fuleMeter.value--;
+            if(fuleMeter.value==fuleMeter.min){
+                window.clearInterval(fillInterval);
+            }
+        }, 50)
+    }
+  </script>
+</body>
+</html>

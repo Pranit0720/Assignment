@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="vegmenus">
+        <li>veg mix</li>
+        <li id="li2">paneer masala</li>
+        <li>veg kadhai</li>
+    </ol>
+    <div>
+        <input type="text" placeholder="enter menu to add" id="menuItem" >
+        <button type="button" onclick="addMenu()">ADD</button>
+    </div>
+     <button type="button" onclick="removeDemo()">remove last child</button>
+    <script>
+        const olEle=document.getElementById('vegmenus');
+        const siblingli=document.getElementById('li2');
+        const menu=document.getElementById("menuItem");
+        function addMenu(){
+            const liNode=document.createElement('li');
+            if(menu.value!=""){
+                liNode.textContent=menu.value;
+                 olEle.append(liNode); // append , prepend  parent.function(child), appendChild
+                //siblingli.before(liNode);  // after, before : sibing1.function(sibing2)
+            }
+        }
+        function removeDemo(){
+            console.log(olEle.children);
+            let len=olEle.children.length;
+            console.log(olEle.children[len-1]);
+            olEle.children[len-1].remove(); // elementtoremove.remove(), parent.removeChild(child)
+        }
+    </script>
+</body>
+</html>
+
+<!-- to add childs in parent, appendChild, append-->

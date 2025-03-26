@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /*2 table have common class*/
+    .tab,  .tab td,  .tab th{
+            border: 1px solid pink;
+            border-collapse: collapse;
+            padding: 10px;
+}
+         /*state of element*/
+        /*pseudo class : hover, */
+        table:hover{
+            background-color: yellow;
+        }
+        
+        /*select 1st tr of below tables*/
+        /*below selection not selecting parent, parent can be anything*/
+        tr:first-child{
+            background-color: aqua;
+        }
+
+        /*below selection is also selecting parent and tr as 1st child of that parent*/
+        /*1st tr of thead */
+        thead>tr:first-child{
+            background-color: blueviolet;
+        }
+
+        /*last-child*/
+        /*select tr as last child of tbody to give different text color*/
+        /*nth-child(number)*/
+        tbody>tr:last-child {
+            color: red;
+        }
+
+        /*give different background color to 2nd td of 3rd tr in tbody*/
+         /*hover on any cell to apply background color*/
+        tbody>tr:nth-child(3)>td:nth-child(2){
+            background-color: brown;
+        }
+        
+         table th:hover, table td:hover{
+            background-color: chartreuse;
+        }
+ /*give different background color to 2nd td of 3rd tr in tbody on hover*/
+        tbody>tr:nth-child(3)>td:nth-child(2):hover{
+            background-color: coral;
+        }
+        /* tbody>tr:nth-child(2)>td:nth-child(3):hover{
+            background-color: greenyellow;
+        } */
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <table class="tab">
+        <thead>
+            <tr><th>STUDENT ID</th><th>PHY</th><th>Chem</th><th>Maths</th><th>Total</th></tr>
+            <tr><th>STUDENT ID</th><th>PHY</th><th>Chem</th><th>Maths</th><th>Total</th></tr>
+        </thead>
+
+        <tbody>
+            <tr><td>101</td><td>99</td><td>91</td><td>93</td><td>94</td></tr>
+            <tr><td>102</td><td>88</td><td>80</td><td>84</td><td>85</td></tr>
+            <tr><td>103</td><td>77</td><td>69</td><td>75</td><td>73</td></tr>
+        </tbody>
+
+        <tfoot>
+            <tr><th>Average</th><td>88</td><td>79</td><td>84</td><td>82</td></tr>
+            <tr><th>Average</th><td>88</td><td>79</td><td>84</td><td>82</td></tr>
+        </tfoot>
+        
+    </table>
+    <hr>
+
+    <table class="tab">
+        <thead>
+            <tr><th>STUDENT ID</th><th>PHY</th><th>Chem</th><th>Maths</th><th>Total</th></tr>
+        </thead>
+
+        <tbody>
+            <tr><td>101</td><td>99</td><td>91</td><td>93</td><td>94</td></tr>
+            <tr><td>102</td><td>88</td><td>80</td><td>84</td><td>85</td></tr>
+            <tr><td>103</td><td>77</td><td>69</td><td>75</td><td>73</td></tr>
+        </tbody>
+
+        <tfoot>
+            <tr><th>Average</th><td>88</td><td>79</td><td>84</td><td>82</td></tr>
+        </tfoot>
+        
+    </table>
+ 
+</body>
+</html>

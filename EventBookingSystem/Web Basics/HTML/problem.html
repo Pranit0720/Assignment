@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Active State</title>
+    <style>
+        /* Navbar styling */
+        nav {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        /* Navbar links */
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            background: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        .nav-link:hover {
+            background-color: #555;
+        }
+
+        /* Active link styling */
+        .active {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="home.html" class="nav-link" onclick="setActive(event)">Home</a>
+        <a href="about.html" class="nav-link" onclick="setActive(event)">About</a>
+        <a href="services.html" class="nav-link" onclick="setActive(event)">Services</a>
+        <a href="contact.html" class="nav-link" onclick="setActive(event)">Contact</a>
+    </nav>
+
+    <script>
+        function setActive(event) {
+            // Remove 'active' class from all links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked link
+            event.target.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,59 +1,93 @@
 ﻿@model IEnumerable<EventBookingSystem.Models.Event>
 
 @{
-    ViewData["Title"] = "GetAllEvents";
+	ViewData["Title"] = "GetAllEvents";
+}
+@if (TempData["message"]!=null)
+{
+
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		@TempData["message"]
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+}
+else
+{
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		<strong>WelCome To EventManagement System</strong>
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
 }
 
-<h1>GetAllEvents</h1>
 
-<p>
-    <a asp-action="AddEvent">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Location)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AvailableSeats)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TicketPrice)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AvailableSeats)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TicketPrice)
-            </td>
-            <td>
-                <a asp-action="Update" asp-route-id="@item.Id">Edit</a> |
-                @* <a asp-action="Details" asp-route-id="@item.Id">Details</a> | *@
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+	<h1>GetAllEvents</h1>
+
+	<p>
+		<form  asp-controller="Event"  asp-action="AddEvent" method="get" style="display:inline;">
+                        @* <input type="hidden" name="id" value="@item.Id" /> *@
+                        <button type="submit" class="btn btn-primary">Add Event</button>
+                    </form>
+
+		@* <a asp-action="AddEvent">Create New</a> *@
+	</p>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>
+					@Html.DisplayNameFor(model => model.Name)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Location)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Date)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.AvailableSeats)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.TicketPrice)
+				</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>
+						@Html.DisplayFor(modelItem => item.Name)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Location)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Date)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.AvailableSeats)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.TicketPrice)
+					</td>
+					<td>
+						<form  asp-controller="Event" asp-action="Update" method="get" style="display:inline;">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-primary">Edit</button>
+                    </form>
+					<form asp-controller="Event" asp-action="BookTickets" method="get" style="display:inline;">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-primary">Book Now</button>
+                    </form>
+					<form  asp-controller="Event"  asp-action="Delete" method="get" style="display:inline;">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+						@* <a asp-action="Update" asp-route-id="@item.Id">Edit</a> | *@
+						@* <a asp-action="BookTickets" asp-controller="BookingTicket" asp-route-id="@item.Id">Book Now</a> | *@
+						@* <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>

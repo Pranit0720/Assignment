@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #div1{ 
+        width: 250px;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        border: 5px solid black;
+        border-image: linear-gradient(to bottom,red,blue,green,orange)1;/* 1 (or border-image-slice: 1;):*/
+    }
+    #div2{
+        font-size:200px;
+            /* font-weight: bold; */
+            background: linear-gradient(to right, blue, red, orange,blue,green,red);
+            background-clip: text;/* it clips the background inside the text instead of the entire element*/
+            color: transparent;/*This hides the default text color, making the gradient visible.*/
+    }
+    </style>
+</head>
+<body>
+<div id="div1">
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</div>
+<hr>
+<b id="div2">
+    GOOGLE
+</b>
+
+<!-- <svg width="100%" height="100">
+    <defs>
+        <linearGradient id="textGradient" gradientTransform="to right">
+            <stop offset="0%" stop-color="red"/>
+            <stop offset="50%" stop-color="blue"/>
+            <stop offset="100%" stop-color="green"/>
+        </linearGradient>
+    </defs>
+    <text x="10" y="50" font-size="80px" font-weight="bold" fill="url(#textGradient)">Pranit Krishna Patil</text>
+</svg> -->
+    
+</body>
+</html>

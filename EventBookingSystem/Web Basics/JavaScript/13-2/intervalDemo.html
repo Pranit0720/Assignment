@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #natureimage{
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img id="natureimage" src="./resources/images/sunsetmarine.jpg" alt="sunset">
+        <figcaption id="">SUNSET</figcaption>
+    </figure>
+
+    <script>
+        const imageEle=document.getElementById("natureimage");
+        // access figcaption using id
+        window.setTimeout(()=>{
+            imageEle.src="./resources/images/water.jpg"
+            imageEle.alt="water"
+            //fc.textContent="WATER";
+        }, 5000);
+        let images=[
+            {
+                path:'https://th.bing.com/th/id/OIP.LWRkQpOtblxyhT_-8RXQygHaEo?rs=1&pid=ImgDetMain',
+                caption:'SUNSET IN DELHI'
+            },
+
+            {
+                path:'https://images.pexels.com/photos/269583/pexels-photo-269583.jpeg?cs=srgb&dl=art-beach-beautiful-269583.jpg&fm=jpg',
+                caption:'SUNSET IN GOA'
+            },
+            {
+                path:'https://wallpaperaccess.com/full/1128330.jpg',
+                caption:'SUNSET IN UP'
+            },
+            {
+                path:'./resources/images/sunsetmarine.jpg',
+                caption:'SUNSET IN MUMBAI'
+            }
+        ]
+        let i=0;
+        const interval=window.setInterval(()=>{
+            const imageObject=images[i];
+            imageEle.src=imageObject.path;
+            imageEle.alt=imageObject.caption;
+            // fc.textContent=imageObject.caption;
+            i++;
+            if(i==images.length)
+                i=0; 
+        /*     if(i==images.length)
+                    window.clearInterval(interval) */
+        }, 1000)
+    </script>
+</body>
+</html>

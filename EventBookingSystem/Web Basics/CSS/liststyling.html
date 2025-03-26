@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ol1{
+            list-style-type: circle;
+            list-style-image: linear-gradient(red, pink, purple);
+            list-style-image: radial-gradient(red, pink, purple);
+            /*small icons*/
+            list-style-image:url(https://img.icons8.com/metro/20/coffee-to-go.png);
+        }
+        #ol2>li::marker{
+          color: green;
+        }
+    </style>
+</head>
+<body>
+    <ol id="ol1">
+        <li>Tea</li>
+        <li>Coffee</li>
+        <li>Green tea</li>
+        <li>Lemon tea</li>
+    </ol>
+    <ol id="ol2">
+        <li>Tea</li>
+        <li>Coffee</li>
+        <li>Green tea</li>
+        <li>Lemon tea</li>
+    </ol>
+    <ul>
+        <li>Tea</li>
+        <li>Coffee</li>
+        <li>Green tea</li>
+        <li>Lemon tea</li>
+    </ul>
+</body>
+</html>

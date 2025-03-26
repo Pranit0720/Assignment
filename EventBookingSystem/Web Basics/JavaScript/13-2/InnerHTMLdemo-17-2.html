@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="message">
+       <b>India is my <i>country</i></b>
+    </p>
+    <button type="button" onclick="copypaste()">PASTE</button>
+    <hr>
+    <p id="innerHTML"></p>
+    <hr>
+    <p id="innerText"></p>
+    <hr>
+    <p id="textContent"></p>
+
+    <script>
+        const p1= document.getElementById("message");
+        const p2= document.getElementById("innerHTML");
+        const p3= document.getElementById("innerText");
+        const p4= document.getElementById("textContent");
+        function copypaste(){
+         console.log( p1.innerHTML); // text along with elements
+         console.log( p1.innerText); // plaintext
+         console.log( p1.textContent); // plaintext
+         p2.innerHTML=p1.innerHTML;
+         p3.innerText=p1.innerText;
+         p3.innerHTML="<mark>"+p1.innerText+"<mark>";
+         p4.textContent=p1.textContent;
+        }
+    </script>
+</body>
+</html>

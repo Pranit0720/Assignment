@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+        }
+        #block1{
+            position:absolute; 
+            z-index: -2; 
+            background: darkgrey;
+        }
+        #block2{
+            background: darkgreen;
+             position:absolute; 
+             z-index: -1;
+        }
+        #block3{
+            background: darkcyan;
+            transition: 3s;
+        }
+        #block3:hover{
+            transform: translate(400px);
+        }
+    </style>
+</head>
+<body>
+    <div class="block" id="block1">
+        div1
+    </div>
+    <div class="block" id="block2">
+        div2
+    </div>
+    <div class="block" id="block3">
+        div3
+    </div>
+</body>
+</html>

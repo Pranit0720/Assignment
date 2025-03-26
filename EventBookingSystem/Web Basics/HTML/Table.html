@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #emp, #emp th , #emp td{
+           border: 1px solid red; 
+           border-collapse: collapse;
+        }
+
+        .tab, .tab th, .tab td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        
+        }
+
+        thead{
+            background: gray;
+        }
+
+        tfoot{
+            background: grey;
+        }
+        .break{
+            background: orangered;
+            
+        }
+        .day{
+            background: purple;
+        }
+        
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr><th>ID</th><th>Name</th></tr>
+        <tr><td>101</td><td>Pranit</td></tr>
+        <tr><td>102</td><td>Kapil</td></tr>
+        <tr><td>103</td><td>Sakthis</td></tr>
+        <tr><td>104</td><td>Om</td></tr>
+    </table>
+
+    <hr>
+
+    <table id="emp">
+        <caption>Employee table</caption>
+        <thead>
+            <tr><th rowspan="2">ID</th><th rowspan="2">Name</th><th colspan="2">Contact</th></tr>
+            <tr><th>Mobile No.</th><th>Tel No.</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>101</td><td>Pranit</td></tr>
+            <tr><td>102</td><td>Kapil</td></tr>
+            <tr><td>103</td><td>Sakthis</td></tr>
+            <tr><td>104</td><td>Om</td></tr>
+        </tbody>
+        
+    </table>
+
+
+    <hr>
+
+    <table class="tab">
+        <thead>
+            <tr><th>STUDENT ID</th><th>PHY</th><th>Chem</th><th>Maths</th><th>Total</th></tr>
+        </thead>
+
+        <tbody>
+            <tr><td>101</td><td>99</td><td>91</td><td>93</td><td>94</td></tr>
+            <tr><td>102</td><td>88</td><td>80</td><td>84</td><td>85</td></tr>
+            <tr><td>103</td><td>77</td><td>69</td><td>75</td><td>73</td></tr>
+        </tbody>
+
+        <tfoot>
+            <tr><th>Average</th><td>88</td><td>79</td><td>84</td><td>82</td></tr>
+        </tfoot>
+        
+    </table>
+
+
+    <hr>
+    <table class="tab">
+        <caption>School Time Table</caption>
+        <tr>
+            <th rowspan="2" class="day">Days</th>
+            <th colspan="8">Periods</th>
+        </tr>
+        <tr>
+            <th>1<sup>st</sup><br>(Time)</th>
+            <th>2<sup>nd</sup><br>(Time)</th>
+            <th>3<sup>rd</sup><br>(Time)</th>
+            <th>4<sup>th</sup><br>(Time)</th>
+            <th rowspan="7" class="break">Break</th>
+            <th>5<sup>th</sup><br>(Time)</th>
+            <th>6<sup>th</sup><br>(Time)</th>
+            <th>7<sup>th</sup><br>(Time)</th>
+        </tr>
+
+        <tr>
+            <th>Monday</th>
+            <td colspan="2">Maths</td>
+            <td>Subject 3</td>
+            <td>Subject 4</td>
+            <td>Subject 5</td>
+            <td>Subject 6</td>
+            <td>Subject 7</td>
+        </tr>
+        <tr>
+            <th>Tuesday</th>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>Wednesday</th>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>Thursday</th>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td rowspan="3">CHEM</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>Friday</th>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td colspan="3">Free</td>
+            
+        </tr>
+        <tr>
+            <th>Saturday</th>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+
+
+            
+    </table>
+ 
+</body>
+</html>

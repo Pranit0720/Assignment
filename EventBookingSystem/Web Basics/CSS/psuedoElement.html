@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-line{
+            color: Red;
+        }
+
+        #firstLetter ,pre::first-letter{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 100px;
+            color: green;
+        }
+
+        #newsarticle{
+            columns: 3;
+        }
+        #newsarticle::first-letter{
+            font-style: italic;
+            font-size: 30px;
+            font-weight: bold;
+            color: darkgoldenrod;
+        }
+
+        body>:not(p){
+            background-color: aquamarine;
+        }
+
+        body>p:not(p::first-line){
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Nesciunt expedita alias sit sapiente, tempore, 
+        dolor facilis voluptas molestiae eos repellendus deleniti delectus consequatur necessitatibus, 
+        commodi unde laudantium? Eum, quae exercitationem.
+    </p>
+    <p>
+        <span id="firstLetter">L</span>ipsum dolor sit amet, consectetur adipisicing elit.<br> 
+        Nesciunt expedita alias sit sapiente, tempore, 
+        dolor facilis voluptas molestiae eos repellendus deleniti delectus consequatur necessitatibus, 
+        commodi unde laudantium? Eum, quae exercitationem.
+    </p>
+    <pre>
+        india is my country
+    </pre>
+
+    <p id="newsarticle">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Veritatis libero deleniti non sunt aperiam sed
+         tenetur voluptate perferendis architecto 
+         distinctio ipsa enim, facilis id reprehenderit modi mollitia possimus alias illum.
+
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+         Veritatis libero deleniti non sunt aperiam sed
+          tenetur voluptate perferendis architecto 
+          distinctio ipsa enim, facilis id reprehenderit modi mollitia possimus alias illum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          Veritatis libero deleniti non sunt aperiam sed
+           tenetur voluptate perferendis architecto 
+           distinctio ipsa enim, facilis id reprehenderit modi mollitia possimus alias illum.
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+           Veritatis libero deleniti non sunt aperiam sed
+            tenetur voluptate perferendis architecto 
+            distinctio ipsa enim, facilis id reprehenderit modi mollitia possimus alias illum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Veritatis libero deleniti non sunt aperiam sed
+             tenetur voluptate perferendis architecto 
+             distinctio ipsa enim, facilis id reprehenderit modi mollitia possimus alias illum.
+             Veritatis libero deleniti non sunt aperiam sed
+             tenetur voluptate perferendis architecto 
+             distinctio ipsa enim, facilis id reprehenderit modi mollitia possimus alias illum.
+    </p>
+</body>
+</html>

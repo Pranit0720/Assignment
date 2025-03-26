@@ -30,13 +30,9 @@ namespace EventBookingSystem.DBContext
             modelBuilder.Entity<TicketBooking>()
                 .Property(e => e.BookingDate)
                 .HasDefaultValueSql("getdate()");
-            //modelBuilder.Entity<User>()
-            //    .HasOne(u => u.IdentityUser)
-            //    .WithMany()
-            //    .HasForeignKey(id => id.Id)
-            //    .OnDelete(DeleteBehavior.Cascade);
 
             base.OnModelCreating(modelBuilder);
+            
 
             //builder.BookingDate(x => x.EntityCreated).HasDefaultValueSql("getdate()");
         }

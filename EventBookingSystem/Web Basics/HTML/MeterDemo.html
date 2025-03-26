@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        meter{
+            height: 50px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <label for="fuelindicator">Fuel Indicator: </label>
+    <span>0</span><meter id="fuelindicator" max="100" min="0" value="50"></meter><span>100</span><br>
+    <div>
+        <!-- low to high safe  other than give warning -->
+        <span>0</span><meter id="" max="100" min="0" low="20" high="90" value="91"></meter><span>100</span>
+    </div>
+
+    <div>
+        <!-- if optimum between high and max then
+         safer: high to max, warning : low to <high, danger : min to <low -->
+        <label for="fuelindicator">Fuel Indicator: </label>
+        <span>0</span><meter id="" max="100" min="0" low="20" optimum="91" high="90" value="10"></meter><span>100</span>
+    </div>
+
+    <div>
+        <!-- if optimum between min and lower then
+         safer: , warning : , danger :  -->
+        <label for="storage">Disk Usages: </label>
+        <span>0</span><meter id="storage" max="100" min="0" low="51" optimum="50" high="90" value="91"></meter><span>100</span>
+    </div>
+
+
+   
+    <div>
+        <button>Start Race</button>
+        <button>Fill Fuel</button>
+    </div>
+</body>
+</html>

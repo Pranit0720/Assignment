@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <figure>
+        <img id="img" src="../Images/image2.jpg" alt="Ball">
+        <figcaption id="figc">CRICKET BALL</figcaption>
+    </figure>
+
+<script>
+    const imgEle=document.getElementById('img');
+    const figC=document.getElementById('figc');
+
+    window.setTimeout(()=>{
+        imgEle.src="../Images/image3.jpg";
+        imgEle.alt="Team";
+        imgEle.style.width='100%';
+        figC.textContent="TEAM INDIA";
+        figC.style.textAlign="center";
+    }, 5000)
+
+
+    let images=[
+        {
+            path:'../Images/image1.jpg',
+            caption:'SunSet1'
+        },
+        {
+            path:'',
+            caption:'SunSet2'
+        },
+        {
+            path:'data:image/jpeg;base64,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',
+            caption:'SunSet3'
+        },
+        {
+            path:'https://media.istockphoto.com/id/2167873099/photo/twilight-background-of-sunset-over-the-tropical-sea-bohol-philippines.webp?a=1&b=1&s=612x612&w=0&k=20&c=k0Clp40prRBXVIUdSwdarOs17Gpie2Vb4fu9OScIbL0=',
+            caption:'SunSet4'
+        }
+    ];
+let i=0;
+window.setInterval=(()=>{
+    const imageObject=images[i];
+    imgEle.src=imageObject.path;
+    imgEle.alt=imageObject.caption;
+    figC.textContent=imageObject.caption;
+    i++;
+    if(i==images.length){
+        i=0;
+    }
+    // if(i==images.length){
+    // window.ClearInterval(interval);
+    // }
+}, 1000)
+
+</script>
+</body>
+</html>

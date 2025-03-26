@@ -1,8 +1,32 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<User> _signInManager;
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    @if (_signInManager.IsSignedIn(User)){
+
+     @if(!string.IsNullOrEmpty(ViewBag.message)){
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @ViewBag.message
+            @* <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> *@
+        </div>
+     }
+     else{
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>WelCome To EventManagement System</strong>
+            @* <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> *@
+        </div>
+     }
+    }else{
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>WelCome To EventManagement System</strong>
+        @* <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> *@
+    </div>
+    }
+
+     
+  

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <input type="text" id="myname" placeholder="enter your name" oninput="upper()">
+    </form>
+    <p>
+        <span>my name is : <b id="upper"></b></span>
+    </p>
+
+    <script>
+        const inele=document.getElementById("myname");
+        const bele=document.getElementById("upper")
+
+        function upper(){
+            bele.textContent=inele.value.toUpperCase();
+        }
+    </script>
+
+    <hr>
+    <!-- Internior -->
+    <input type="text"  id="myname1" oninput="console.log(myname1.value.toUpperCase())"><hr>
+    <!-- inline -->
+    <input type="text"  id="myname2" oninput="upper1.textContent=myname2.value.toUpperCase()"><hr>
+    <p>my name is <b id="upper1"></b></p>
+    <hr>
+    <!-- Optput tag -->
+    <input type="text"  id="myname3" oninput="upper2.value=myname3.value.toUpperCase();same.value=myname3.value;lower.value=myname3.value.toLowerCase()">
+    <p>my name is <b> <output  id="upper2"></output></b> <output id="same"></output>  <output id="lower"></output></p>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Fixed Position</title>
+    <style>
+        div{
+            border:3px solid green;
+        }
+        p,b{
+            border:3px solid red;
+        }
+        .prelative{
+            position: relative; /*relative to current position*/ /*default static*/
+        }
+        .pfix{
+            position: fixed; /*relative to viewport*/
+        }
+        #para{
+            background: yellow;
+            left:100px; 
+           
+        }
+        #bolde{
+            background: blueviolet;
+            left: 100px;
+            top: 60px;
+        }
+        #bolde2{
+            bottom: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <b class="prelative" id="bolde">NESOFT</b>
+        <b class="pfix" id="bolde2">NESOFT</b>
+        <p class="prelative" id="para">NESOFT</p>
+    </div>
+</body>
+</html>

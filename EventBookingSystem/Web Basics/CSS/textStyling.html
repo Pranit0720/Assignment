@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text styling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+GB+S+Guides:ital@0;1&family=Playwrite+MX+Guides&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <style>
+        article, h1{
+            border:3px double green
+        }
+        article{
+            text-align: center; /*inside article, all child elements' text aligned*/
+            justify-items: center; /*inside article, all child elements aligned*/
+        }
+        h1{
+            width: 50%;
+            text-transform: uppercase;
+            color: green;
+            font-style: italic;
+            font-weight: lighter;
+            text-decoration-line: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: blueviolet;
+            text-decoration-thickness: 10px;
+            text-decoration: underline double darkcyan 3px;
+        }
+        h2{
+            border:4px solid;
+            width: 30%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .vinaFont {
+        font-family: "Yuji Mai", serif;
+        font-weight: 400;
+    
+        }
+        h3{
+            color: green;
+            text-shadow: 10px; /*it wont work*/
+            text-shadow: 0px -5px; /*+r +b , -l ,-t*/
+            text-shadow: 10px 10px;
+            text-shadow: 10px 10px 5px;
+            text-shadow: 10px 10px 2px hotpink;
+        }
+    </style>
+</head>
+<body>
+    <article>
+       
+        <h1>neoSOFT</h1>
+        <h2>hi</h2>
+        <h3 class="vinaFont">INDIA</h3>
+    </article>
+</body>
+</html>

@@ -15,6 +15,7 @@ namespace EventBookingSystem.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.message= TempData["mess"];
             return View();
         }
 

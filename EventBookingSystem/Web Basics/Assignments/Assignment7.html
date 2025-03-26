@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7-Feb</title>
+    <style>
+        /* General styles for all figure tags */
+        figure {
+            border: 2px solid black;
+            padding: 10px;
+            
+            width: 220px; /* Adjust width */
+        }
+
+        /* Center align image and caption for first and last figure */
+        .FirstLast{
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        /* Make the second figure's image rounded */
+        .FirstLast+figure>img {
+            border-radius: 50%;
+        }
+
+        /* Ensure images are responsive */
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <figure class="FirstLast">
+        <img src="../Images/image1.jpg" alt="Image 1">
+        <figcaption>First Image</figcaption>
+    </figure>
+
+    <figure>
+        <img src="../Images/image2.jpg" alt="Image 2">
+        <figcaption>Second Image</figcaption>
+    </figure>
+
+    <figure class="FirstLast">
+        <img src="../Images/image3.jpg" alt="Image 3">
+        <figcaption>Third Image</figcaption>
+    </figure>
+
+</body>
+</html>

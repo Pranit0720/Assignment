@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Images</title>
+    <style>
+        .heading{
+            border : 20px solid;
+            border-image-source: url(./Images/favorite-star-icon.webp);
+            border-image-slice: 100;
+        }
+        #heading1{
+            border-image-repeat: repeat;
+        }
+        #heading2{
+            border-image-repeat: space;
+        }
+        #heading3{
+            border-image-repeat: round;
+            border-image-outset: 30px;
+            /*slice/width/outset url image-repeat*/
+            border-image: 100/20px/20px url(./Images/image1.jpg)  repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading" id="heading1">NEOSOFT</h1>
+    <h1 class="heading"  id="heading2">NEOSOFT</h1>
+    <h1 class="heading"  id="heading3">NEOSOFT</h1>
+</body>
+</html>

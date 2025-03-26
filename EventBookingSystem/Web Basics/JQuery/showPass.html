@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+
+    <div>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass">
+        <input type="checkbox"  id="showpass"> <label for="showpass">:Show password</label>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+     /*  $("#showpass").on("change", ()=>{
+            showpassword();
+      }); */
+        $("#showpass").change(()=>showpassword());
+        function showpassword(){
+            if($("#showpass").prop("checked"))
+                $("#pass").prop("type","text")
+            else
+                $("#pass").prop("type","password");
+        }
+
+        const h1ele=$("<h1>");
+        h1ele.text("Show Password Demo");
+        h1ele.prop("id", "mainheading");
+       // h1ele.prop("class", "heading");
+       // h1ele.prop("class", "topheading"); 
+        h1ele.addClass("heading");
+        h1ele.addClass("topheading");
+        $("body").prepend(h1ele);
+
+        /*append, prepend, before, after, remove same as js
+        JS           JQUERY
+        innerHTML -> html()
+        innerText, textContent -> text()
+        value -> val()
+        ele.attribute -> selector.prop()
+        classList.add() -> addCLass(),
+        ele.style... -> css();
+        getElementById-> $("#idvalue") 
+        getElementsByClassName-> $(".classvalue") 
+        getElementsByTagName-> $("element") 
+        getElementsByName-> $("[attr=value]") 
+        createElement -> $("<element>")
+        all events -> all event functions
+        no effects without logic -> effect functions
+
+        */
+    </script>
+</body>
+</html>
