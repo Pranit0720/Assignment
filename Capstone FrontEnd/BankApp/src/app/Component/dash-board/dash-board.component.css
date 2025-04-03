@@ -1,0 +1,23 @@
+.container {
+    max-width: 800px;
+  }
+  
+  .navbar {
+    border-radius: 10px;
+  }
+  
+  .card {
+    border-radius: 15px;
+    background: #f8f9fa;
+  }
+  
+  .list-group-item {
+    border-radius: 10px;
+    background: white;
+    transition: 0.3s;
+  }
+  
+  .list-group-item:hover {
+    background: #e9ecef;
+  }
+  

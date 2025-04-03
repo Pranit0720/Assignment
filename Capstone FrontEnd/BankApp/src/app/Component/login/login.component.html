@@ -1,0 +1,77 @@
+<!-- <div class="login-Layout">
+
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">
+    <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="text" class="form-control" id="email" required
+    #email="ngModel" name="email"[(ngModel)]=loginModel.email>
+    <span *ngIf="email.invalid && email.touched"style="color:red">Email is required</span>
+</div>
+<div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" required
+    #password="ngModel" name="password"[(ngModel)]=loginModel.password>
+    <span *ngIf="password.invalid && password.touched"style="color:red">Password is required</span>
+</div>
+<button type="submit" class="btn btn-primary" >Login</button>
+</form>
+</div> -->
+
+
+<div class="login-container">
+    <div class="login-card">
+      <h2 class="text-center mb-4">Welcome Back</h2>
+      
+      <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">
+        <div class="mb-4">
+          <label for="email" class="form-label">Email address</label>
+          <input 
+            type="email" 
+            class="form-control" 
+            id="email" 
+            required
+            #email="ngModel" 
+            name="email"
+            [(ngModel)]="loginModel.email"
+            placeholder="example@gmail.com">
+          <div *ngIf="email.invalid && email.touched" class="error-message">
+            <small>Email is required</small>
+          </div>
+        </div>
+        
+        <div class="mb-4">
+          <label for="password" class="form-label">Password</label>
+          <input 
+            type="password" 
+            class="form-control" 
+            id="password" 
+            required
+            #password="ngModel" 
+            name="password"
+            [(ngModel)]="loginModel.password"
+            placeholder="••••••••">
+          <div *ngIf="password.invalid && password.touched" class="error-message">
+            <small>Password is required</small>
+          </div>
+        </div>
+        
+        
+        <button 
+          type="submit" 
+          class="btn btn-primary w-100" 
+          [disabled]="loginForm.invalid">
+          Log In
+        </button>
+        
+        <!-- <button 
+          type="submit" 
+          class="btn btn-primary w-100" 
+          [disabled]="loginForm.invalid">
+          Register
+        </button> -->
+        <div class="text-center mt-3">
+          New User? <a  class="text-decoration-none" routerLink="/register">Register Now</a>
+        </div>
+      </form>
+    </div>
+  </div>

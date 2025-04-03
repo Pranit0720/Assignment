@@ -1,0 +1,53 @@
+<div class="register-container">
+    <div class="register-card">
+      <h2 class="text-center mb-4">Transfer Funds</h2>
+  
+      <form #transactionForm="ngForm" (ngSubmit)="transfertoanotheruser(transactionForm)">
+  
+        <div class="mb-4">
+          <label for="accountNumber" class="form-label">Account Number</label>
+          <input 
+            type="number" 
+            class="form-control" 
+            id="accountNumber" 
+            required
+            #accountNumber="ngModel" 
+            name="accountNumber"
+            [(ngModel)]="transferModel.accountNumber"
+            placeholder="Enter Account Number">
+          <div *ngIf="accountNumber.invalid && accountNumber.touched" class="error-message">
+            <small>Account Number is required</small> 
+          </div>
+        </div>
+  
+        <div class="mb-4">
+          <label for="Amount" class="form-label">Amount (₹)</label>
+          <input 
+            type="number" 
+            class="form-control" 
+            id="Amount" 
+            required
+            #Amount="ngModel" 
+            name="Amount"
+            [(ngModel)]="transferModel.amount"
+            placeholder="Enter Amount">
+          <div *ngIf="Amount.invalid && Amount.touched" class="error-message">
+            <small>Amount is required</small> 
+          </div>
+        </div>
+  
+        <button 
+          type="submit" 
+          class="btn btn-primary w-100 custom-btn" 
+          [disabled]="transactionForm.invalid">
+          Transfer Now
+        </button>
+  
+        <div class="text-center mt-3">
+          <span>View your </span>
+          <a class="text-decoration-none text-primary fw-bold" routerLink="/myAccounts">Account List</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  

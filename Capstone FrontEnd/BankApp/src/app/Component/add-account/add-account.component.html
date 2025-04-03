@@ -1,0 +1,29 @@
+<div>
+    <h3>Add New Account</h3>
+      <form #accountForm="ngForm" (ngSubmit)="addAccount(accountForm)">
+        <div class="mb-3">
+          <label for="accountNumber" class="form-label">Account Number</label>
+          <input type="text" id="accountNumber" class="form-control" [(ngModel)]="newAccount.accountNumber" name="accountNumber" required />
+        </div>
+     
+        <div class="mb-3">
+          <label for="balance" class="form-label">Balance</label>
+          <input type="number" id="balance" class="form-control" [(ngModel)]="newAccount.balance" name="balance" required />
+        </div>
+     
+        <div class="mb-3">
+          <label for="accountType" class="form-label">Account Type</label>
+          <select id="accountType" class="form-control" [(ngModel)]="newAccount.accountTypes" name="accountType" required>
+            <option [value]="0">Current</option>
+            <option [value]="1">Saving</option>
+            <option [value]="2">Joint Account</option>
+            <option [value]="3">Salary Account</option>
+          </select>
+        </div>
+     
+        <button type="submit" class="btn btn-primary">Add Account</button>
+      </form>
+     
+      <p *ngIf="successMessage" class="text-success">{{ successMessage }}</p>
+      <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+    </div>

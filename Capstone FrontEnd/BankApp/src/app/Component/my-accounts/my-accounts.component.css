@@ -1,0 +1,31 @@
+
+.custom-table {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .custom-table thead {
+    background: #343a40; 
+    color: white;
+  }
+  
+  .custom-table tbody tr:hover {
+    background: #f8f9fa; 
+  }
+  
+  
+  .btn-group button {
+    margin: 2px;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+ 
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  

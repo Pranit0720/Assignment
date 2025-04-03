@@ -1,0 +1,21 @@
+<div class="container my-5">
+  <nav class="navbar navbar-dark bg-primary p-3 rounded">
+    <h1 class="text-white">Banking Services</h1>
+  </nav>
+
+  <main class="card shadow-lg p-4 mt-4">
+    <h2 class="text-center text-primary">{{ title }}</h2>
+    <p class="text-muted text-center">{{ subtitle }}</p>
+
+    <h3 class="mt-4 text-secondary">Our Services</h3>
+    <ul class="list-group mt-3">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let service of services">
+        <div>
+          <strong class="text-dark">{{ service.name }}</strong>
+          <p class="text-muted m-0">{{ service.description }}</p>
+        </div>
+        <span class="badge bg-success p-2">Available</span>
+      </li>
+    </ul>
+  </main>
+</div>

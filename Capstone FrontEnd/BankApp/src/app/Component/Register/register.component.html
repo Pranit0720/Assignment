@@ -1,0 +1,83 @@
+<div class="register-container">
+    <div class="register-card">
+      <h2 class="text-center mb-4">Create an Account</h2>
+      
+      <form #registerForm="ngForm" (ngSubmit)="registerUser(registerForm)">
+        <div class="mb-4">
+          <label for="FirstName" class="form-label">First Name</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="FirstName" 
+            required
+            #firstName="ngModel" 
+            name="FirstName"
+            [(ngModel)]="registerModel.firstName"
+            placeholder="John Doe">
+          <div *ngIf="firstName.invalid && firstName.touched" class="error-message">
+            <small>Name is required</small> 
+          </div>
+        </div>
+
+
+        <div class="mb-4">
+            <label for="LastName" class="form-label">Last Name</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              id="LastName" 
+              required
+              #lastName="ngModel" 
+              name="LastName"
+              [(ngModel)]="registerModel.lastName"
+              placeholder="John Doe">
+            <div *ngIf="lastName.invalid && lastName.touched" class="error-message">
+              <small>Name is required</small>
+            </div>
+          </div>
+        
+        <div class="mb-4">
+          <label for="email" class="form-label">Email address</label>
+          <input 
+            type="email" 
+            class="form-control" 
+            id="email" 
+            required
+            #email="ngModel" 
+            name="email"
+            [(ngModel)]="registerModel.email"
+            placeholder="example@gmail.com">
+          <div *ngIf="email.invalid && email.touched" class="error-message">
+            <small>Email is required</small>
+          </div>
+        </div>
+        
+        <div class="mb-4">
+          <label for="password" class="form-label">Password</label>
+          <input 
+            type="password" 
+            class="form-control" 
+            id="password" 
+            required
+            #password="ngModel" 
+            name="password"
+            [(ngModel)]="registerModel.password"
+            placeholder="Must Be 6 Char">
+          <div *ngIf="password.invalid && password.touched" class="error-message">
+            <small>Password is required</small>
+          </div>
+        </div>
+        
+        <button 
+          type="submit" 
+          class="btn btn-primary w-100" 
+          [disabled]="registerForm.invalid">
+          Register
+        </button>
+        
+        <div class="text-center mt-3">
+          Already have an account? <a  class="text-decoration-none" routerLink="/login">Log In</a>
+        </div>
+      </form>
+    </div>
+  </div>

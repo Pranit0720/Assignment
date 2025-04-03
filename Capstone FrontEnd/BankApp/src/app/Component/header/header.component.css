@@ -1,0 +1,14 @@
+img{
+    height: 75px;
+    width: 100px;
+    border-radius: 50%;
+}
+custom-navbar {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+  }
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  .navbar-toggler {
+    border: none;
+  }

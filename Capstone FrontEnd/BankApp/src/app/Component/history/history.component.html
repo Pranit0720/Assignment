@@ -1,0 +1,28 @@
+<div class="container mt-4">
+
+    <h2 class="text-center mb-4">Transaction History</h2>
+  <div class="text-center mt-3">
+           <a  class="text-decoration-none" routerLink="/myAccounts">My Accounts</a>
+        </div>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover text-center custom-table">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Transaction Type</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Date</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tran of transaction">
+            <td>{{ tType[tran.transactionType - 1] }}</td>
+            <td>{{ tran.amount | currency:'INR':'symbol' }}</td>
+            <td>{{ tran.date | date:'MMM d, y, h:mm a' }}</td>
+            <td>{{ tran.description }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
