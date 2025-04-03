@@ -70,7 +70,7 @@ namespace BankApp.Infrstructure.Repository
             {
                 throw new DllNotFoundException($"Account id {id} not found!!");
             }
-            updateaccount.Balance = accounts.Balance;
+            //updateaccount.Balance = accounts.Balance;
             updateaccount.AccountTypes = accounts.AccountTypes;
             _bankDBContext.Account.Update(updateaccount);
             return await _bankDBContext.SaveChangesAsync();

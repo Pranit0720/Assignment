@@ -12,6 +12,8 @@ namespace BankApp.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddHttpContextAccessor();
+
             // Add services to the container.
             builder.Services.AddApplicationServices();
             builder.Services.AddInterfaceServices(builder.Configuration);
@@ -21,6 +23,7 @@ namespace BankApp.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddCors();
             //builder.Services.AddAuthentication();
             //builder.Services.AddAuthorization();
 
@@ -35,7 +38,7 @@ namespace BankApp.API
 
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
-            app.UseMiddleware<ExceptionMiddleware>();
+            //app.UseMiddleware<ExceptionMiddleware>();
 
 
             app.UseHttpsRedirection();

@@ -15,17 +15,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BankApp.API.Controllers
 {
-    //[Authorize(Roles = "Administartor")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
     {
+        private readonly IHttpContextAccessor _httpContextAccessor;
         readonly IMediator _iMediatR;
         readonly UserManager<ApplicationUser> _userManager;
-        public AccountController(IMediator iMediator, UserManager<ApplicationUser> userManager)
+        public AccountController(IMediator iMediator, UserManager<ApplicationUser> userManager, IHttpContextAccessor httpContextAccessor)
         {
             _iMediatR = iMediator;
             _userManager = userManager;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [Authorize(Roles = "Administartor")]
@@ -33,7 +35,7 @@ namespace BankApp.API.Controllers
 
         public async Task<IActionResult> GetAccountsAsync()
         {
-            var allAccounts= await _iMediatR.Send(new GetAllAccountsQuery());
+            var allAccounts = await _iMediatR.Send(new GetAllAccountsQuery());
             return Ok(allAccounts);
         }
         [Authorize(Roles = "Administartor")]
@@ -47,8 +49,8 @@ namespace BankApp.API.Controllers
         [HttpPost("AddAccount")]
         public async Task<IActionResult> AddAccount(AccountAddModel accounts)
         {
-            var userId =  _userManager.GetUserId(User);
-            var user= await _userManager.FindByEmailAsync(userId);
+            var userId = _userManager.GetUserId(User);
+            var user = await _userManager.FindByEmailAsync(userId);
 
 
             var account = await _iMediatR.Send(new AddAccountCommand(user.Id, accounts));
@@ -61,10 +63,10 @@ namespace BankApp.API.Controllers
             return Ok(account);
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateAccount([FromQuery]int id,[FromBody]AccountUpdateModel account)
+        public async Task<IActionResult> UpdateAccount([FromQuery] int id, [FromBody] AccountUpdateModel account)
         {
-            
-            var accounts = await _iMediatR.Send(new UpdateAccountCommand(id,account));
+
+            var accounts = await _iMediatR.Send(new UpdateAccountCommand(id, account));
             return Ok(accounts);
         }
 
@@ -73,9 +75,40 @@ namespace BankApp.API.Controllers
         {
             var userId = _userManager.GetUserId(User);
             var user = await _userManager.FindByEmailAsync(userId);
+            
             var account = await _iMediatR.Send(new GetAccountByUserIdQuery(user.Id));
             return Ok(account);
         }
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//if (!_httpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
+//{
+//    return Unauthorized();
+//}
+//var user = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value ?? null;
+//if (user == null)
+//{
+//    return BadRequest("User not found");
+//}
