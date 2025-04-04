@@ -21,9 +21,6 @@ export class UserService {
   }
   
   isLoggedIn():boolean{
-    // if (isPlatformBrowser(this.platformId)) {
       return !!localStorage.getItem('token');
-    
-    // return false;
   }
 }

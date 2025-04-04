@@ -5,6 +5,7 @@ export interface Accounts {
   balance: number;
   accountTypes: AccountTypes;
   createdDate: Date;
+  isDelete:number;
   transactions?: Transactions[];
 }
 export interface Transactions {
@@ -57,10 +58,10 @@ export class AddAccount{
   balance:number;
   accountTypes: AccountTypes;
   
-  constructor(accountNumber:number,balance:number,accountType: AccountTypes) {
+  constructor(accountNumber:number,balance:number,accountTypes: AccountTypes) {
     this.accountNumber=accountNumber;
     this.balance=balance;
-    this.accountTypes=accountType;
+    this.accountTypes=accountTypes;
   }
 
 

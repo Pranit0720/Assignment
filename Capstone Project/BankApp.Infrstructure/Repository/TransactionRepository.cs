@@ -69,6 +69,11 @@ namespace BankApp.Infrastructure.Repository
 
         public async Task<int> TransferToAnotherAccountBuAccountNumber(int accountId, TransactionTransferModel transferModel)
         {
+            if (transferModel.Amount==0)
+            {
+                throw new BadRequestException("Amount ");
+
+            }
             var transaction = new Transactions
             {
                 AccountId = accountId,

@@ -2,6 +2,7 @@ export const AccountEnumString = [
     "Saving Account",
     "Current Account",
     "Joint Account",
+    "Salary Account"
 
 ]
 

@@ -29,6 +29,8 @@ namespace BankApp.Domain
         public AccountTypes AccountTypes { get; set; }
         [Required]
         public DateTime CreatedDate { get; set; }= DateTime.Now;
+        [Required]
+        public int IsDelete { get; set; }
         [JsonIgnore]
 
         public ICollection<Transactions>? Transactions { get; set; }

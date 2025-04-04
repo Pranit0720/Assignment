@@ -13,7 +13,7 @@
             #firstName="ngModel" 
             name="FirstName"
             [(ngModel)]="registerModel.firstName"
-            placeholder="John Doe">
+            placeholder="John">
           <div *ngIf="firstName.invalid && firstName.touched" class="error-message">
             <small>Name is required</small> 
           </div>
@@ -30,7 +30,7 @@
               #lastName="ngModel" 
               name="LastName"
               [(ngModel)]="registerModel.lastName"
-              placeholder="John Doe">
+              placeholder="Doe">
             <div *ngIf="lastName.invalid && lastName.touched" class="error-message">
               <small>Name is required</small>
             </div>

@@ -1,6 +1,7 @@
 ﻿using System.Security.Claims;
 using BankApp.Application.Features.AccountFeature.Command.AddAccount;
 using BankApp.Application.Features.AccountFeature.Command.DeleteAccount;
+using BankApp.Application.Features.AccountFeature.Command.DisableAccount;
 using BankApp.Application.Features.AccountFeature.Command.UpdateAccount;
 using BankApp.Application.Features.AccountFeature.Query.GetAccountsByUserId;
 using BankApp.Application.Features.AccountFeature.Query.GetAllAccounts;
@@ -45,7 +46,6 @@ namespace BankApp.API.Controllers
             var account = await _iMediatR.Send(new GetAllAccountsByIdQuery(id));
             return Ok(account);
         }
-        [Authorize(Roles = "User")]
         [HttpPost("AddAccount")]
         public async Task<IActionResult> AddAccount(AccountAddModel accounts)
         {
@@ -56,6 +56,7 @@ namespace BankApp.API.Controllers
             var account = await _iMediatR.Send(new AddAccountCommand(user.Id, accounts));
             return Ok(account);
         }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAccount(int id)
         {
@@ -75,11 +76,18 @@ namespace BankApp.API.Controllers
         {
             var userId = _userManager.GetUserId(User);
             var user = await _userManager.FindByEmailAsync(userId);
-            
+
             var account = await _iMediatR.Send(new GetAccountByUserIdQuery(user.Id));
             return Ok(account);
         }
 
+        [HttpPut("DisableAccount")]
+        public async Task<IActionResult> DisableAccount([FromQuery]int accountId)
+        {
+            var account = await _iMediatR.Send(new DisableAccountCommand(accountId));
+            return Ok(account);
+
+        }
     }
 }
 

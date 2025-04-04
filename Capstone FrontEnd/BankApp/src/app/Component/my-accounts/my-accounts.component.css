@@ -28,4 +28,6 @@
   h2 {
     font-weight: bold;
   }
-  
+  li{
+    list-style: none;
+  }

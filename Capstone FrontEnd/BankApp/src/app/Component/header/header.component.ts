@@ -4,6 +4,7 @@ import { Route, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../../services/user.service';
+import { TokenService } from '../../services/token.service';
 
 @Component({
   selector: 'app-header',
@@ -13,8 +14,10 @@ import { UserService } from '../../services/user.service';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  constructor(public userservice: UserService,private router:Router) {}
- 
+  constructor(public userservice: UserService,private router:Router,public tokenservice:TokenService) {
+
+    console.log("User Role at startup:", this.tokenservice.getUserRole());
+  }
  
   logout() {
     localStorage.clear();

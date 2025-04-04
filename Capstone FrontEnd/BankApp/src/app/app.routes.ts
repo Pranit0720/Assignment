@@ -8,6 +8,7 @@ import { HistoryComponent } from './Component/history/history.component';
 import { TransactionComponent } from './Component/transaction/transaction.component';
 import { TransferAmountComponent } from './Component/transfer-amount/transfer-amount.component';
 import { AddAccountComponent } from './Component/add-account/add-account.component';
+import { AllAccountsComponent } from './Component/all-accounts/all-accounts.component';
 
 export const routes: Routes = [
     {path:'register',component:RegisterComponent},
@@ -18,7 +19,8 @@ export const routes: Routes = [
     {path:'transaction',component:TransactionComponent},
     {path:'transferAmount',component:TransferAmountComponent},
     {path:'AddAccount',component:AddAccountComponent},
+    {path:'allAccounts',component:AllAccountsComponent},
 
-
+    
 
 ];

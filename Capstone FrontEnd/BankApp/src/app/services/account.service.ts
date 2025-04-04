@@ -28,12 +28,20 @@ export class AccountService {
   transferAmount(transactionData:TransferModel):Observable<TransferModel>{
     return this.http.post<TransferModel>(`https://localhost:7092/api/Transaction/Transfer?id=${this.sharedData}`,transactionData);
 }
-AddAccount(transactionData:AddAccount):Observable<AddAccount>{
-  return this.http.post<AddAccount>(`https://localhost:7092/api/Account/AddAccount`,transactionData);
+AddAccount(transactionData:any):Observable<any>{
+  return this.http.post(`https://localhost:7092/api/Account/AddAccount`,transactionData);
 }
 deleteAccount(id: number): Observable<any> {
   return this.http.delete(`https://localhost:7092/api/Account/${id}`);
 }
+allAccounts(): Observable<Accounts[]> {
+  return this.http.get<Accounts[]>(`https://localhost:7092/api/Account/GetAllAccounts`);
+}
+
+softDelete(id:number):Observable<any>{
+  return this.http.put(`https://localhost:7092/api/Account/DisableAccount?accountId=${id}`,id);
+}
+
   getId(id:number){
     this.sharedData=id;
     // console.log(id);

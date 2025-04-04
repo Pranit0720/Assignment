@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BankApp.API.Controllers
 {
-    [Authorize(Roles ="User")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     
@@ -24,7 +24,7 @@ namespace BankApp.API.Controllers
         {
             _iMediatR = iMediator;
         }
-
+        [Authorize(Roles = "Administartor")]
         [HttpGet("GetAllTransaction")]
         public async Task<IActionResult> GetAllTransactions()
         {
